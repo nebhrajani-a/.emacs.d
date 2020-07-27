@@ -1,0 +1,45 @@
+#!/bin/csh -f
+# vgrind a vhdl file,  Usage: vhdlgrind [vgrind args] [filename]
+# This is a polyglot file, read by both csh and vgrind
+# The environment variable $TROFF should be set to your favorite *roff,
+# e.g. /usr/ucb/ptroff for postscript and set $PRINTER to your local printer
+#if (! $?TROFF) setenv TROFF /usr/ucb/ptroff
+
+set n=$0; if ($0 !~ /*) set n=$cwd/$0; @ num = $#argv - 1
+
+if ($#argv == 0) then
+  head -5 $n; exit
+endif
+(if ($argv[$#argv] =~ */*) cd $argv[$#argv]:h;\
+ /usr/ucb/vgrind -lvhdl -h "Centre for Development of Advanced Computing" -d $n $argv[$num] $argv[$#argv]:t &)
+exit
+
+vhdl|vhd:\
+	:pb=(^\d?(procedure|function)\d\p\d|\(|;|\:):\
+	:bb=\d(begin|block|body|case|component|configuration\
+	|entity|for|if|loop|package|process|while|with)\d:\
+	:be=\dend:\
+	:cb=--:ce=$:\
+	:oc:\
+	:kw=abs access after alias all and architecture array assert attribute\
+	begin block body buffer bus\
+	case component configuration constant\
+	delayed disconnect downto\
+	else elsif end entity event exit\
+	file for function\
+	generate generic guarded\
+	if in inout is\
+	label last_value library linkage loop\
+	map mod\
+	nand new next nor not null\
+	of on open or others out\
+	package port procedure process\
+        quiet\
+	range record register rem report return reverse_range\
+	select severity stable signal subtype\
+	then to transport type\
+	units until use\
+	variable\
+	wait when while with\
+	xor:
+

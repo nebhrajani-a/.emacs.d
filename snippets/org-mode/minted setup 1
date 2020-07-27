@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: minted setup 1
+# key: <mi
+# --
+ #+ATTR_LATEX: :options frame=single, framesep=10pt, linenos

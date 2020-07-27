@@ -1,0 +1,126 @@
+
+               ===========================================
+                   HELP FOR VHDL COMMAND ABBREVIATIONS
+               ===========================================
+
+The commands in VHDL mode can also be invoked by command abbreviations.
+This works by typing a semicolon (;) followed by two letters which uniquely
+specify the command. For instance typing ;ca and then pressing spacebar will
+run the command 'vhdl-case'. This command will prompt you for the selector 
+expression, and the choices, and create the vhdl when statement.
+
+There are other abbreviations too -- the function 'vhdl-case' has "case" as 
+an abbreviation too. This means that when you type in case followed by a 
+space, the function is automatically invoked. The list below is grouped in 
+two parts -- the first has the abbreviations beginning with a standard ";"
+and in the second group has the word abbreviations.
+
+
+                       VHDL-mode-abbrev-table
+                      ========================
+
+    ----------------------------------------------------------------
+    SEMICOLON             FUNCTION                      SEMICOLON 
+    ABBREVIATION                                       ABBREVIATION
+    ----------------------------------------------------------------
+
+    ;ab --------  vhdl-architecture-body-hook   --------------- ;ab
+    ;ac --------  vhdl-architecture-hook        --------------- ;ac
+    ;ar --------  vhdl-array-hook               --------------- ;ar
+    ;as --------  vhdl-assert-hook              --------------- ;as
+    ;at --------  vhdl-attribute-hook           --------------- ;at 
+
+    ;bl --------  vhdl-block-hook               --------------- ;bl
+    ;br --------  vhdl-paired-parens-hook       --------------- ;br
+
+    ;ca --------  vhdl-case-hook                --------------- ;ca
+    ;cf --------  vhdl-configuration-hook       --------------- ;cf
+    ;ci --------  vhdl-component-instance-hook  --------------- ;ci
+    ;cm --------  vhdl-display-comment-hook     --------------- ;cm
+    ;co --------  vhdl-component-hook           --------------- ;co
+
+    ;ei --------  vhdl-elsif-hook               --------------- ;ei
+    ;el --------  vhdl-else-hook                --------------- ;el
+    ;en --------  vhdl-entity-hook              --------------- ;en
+    ;ex --------  vhdl-exit-hook                --------------- ;ex
+
+    ;fo --------  vhdl-for-loop-hook            --------------- ;fo
+    ;fn --------  vhdl-function-spec-hook       --------------- ;fn
+
+    ;ge --------  vhdl-generic-hook             --------------- ;ge
+    ;gn --------  vhdl-generate-hook            --------------- ;gn
+
+    ;h  --------  vhdl-help-hook                --------------- ;h 
+    ;hd --------  vhdl-header-hook              --------------- ;hd
+
+    ;ic --------  vhdl-inline-comment-hook      --------------- ;ic
+    ;if --------  vhdl-if-hook                  --------------- ;if
+
+    ;lp --------  vhdl-loop-hook                --------------- ;lp
+
+    ;pa --------  vhdl-package-body-hook        --------------- ;pa
+    ;pc --------  vhdl-procedure-hook           --------------- ;pc
+    ;pr --------  vhdl-process-hook             --------------- ;pr
+    ;ps --------  vhdl-procedure-spec-hook      --------------- ;ps
+
+    ;re --------  vhdl-record-hook              --------------- ;re
+
+    ;si --------  vhdl-signals-hook             --------------- ;si
+    ;su --------  vhdl-subprogram-body-hook     --------------- ;su
+
+    ;ty --------  vhdl-type-hook                --------------- ;ty
+    ;us --------  vhdl-use-hook                 --------------- ;us
+    ;va --------  vhdl-variables-hook           --------------- ;va
+
+    ;wa --------  vhdl-wait-hook                --------------- ;wa
+    ;wh --------  vhdl-when-hook                --------------- ;wh
+    ;wl --------  vhdl-while-loop-hook          --------------- ;wl
+
+
+    ================================================================
+
+    Below are the word abbreviations.
+
+    ----------------------------------------------------------------
+    WORD ABBREVIATION                       FUNCTION 
+    ----------------------------------------------------------------
+
+    architecture    -----------------  vhdl-architecture-hook 
+    array           -----------------  vhdl-array-hook 
+    assert          -----------------  vhdl-assert-hook 
+    attribute       -----------------  vhdl-attribute-hook 
+
+    case            -----------------  vhdl-case-hook 
+    configuration   -----------------  vhdl-configuration-hook 
+    component       -----------------  vhdl-component-hook 
+
+    entity          -----------------  vhdl-entity-hook 
+
+    for             -----------------  vhdl-for-loop-hook 
+    function        -----------------  vhdl-function-spec-hoo
+
+    generic         -----------------  vhdl-generic-hook 
+
+    help            -----------------  vhdl-help-hook 
+    header          -----------------  vhdl-header-hook 
+
+    if              -----------------  vhdl-if-hook 
+
+    loop            -----------------  vhdl-loop-hook 
+
+    procedure       -----------------  vhdl-procedure-hook 
+
+    record          -----------------  vhdl-record-hook
+
+    signal          -----------------  vhdl-signals-hook 
+
+    type            -----------------  vhdl-type-hook 
+
+    use             -----------------  vhdl-use-hook 
+
+    variable        -----------------  vhdl-variables-hook 
+
+    while           -----------------  vhdl-while-loop-hook 
+    wait            -----------------  vhdl-wait-hook 
+
+=======================================================================

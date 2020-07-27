@@ -1,0 +1,20 @@
+
+               WELCOME TO THE VHDL MODE OF EMACS !
+              ------------------------------------
+
+  I can see that you are green -  you are opening a  VHDL file for the
+first time in Emacs. I hope that you will  get over your reluctance to
+use Emacs, if you are used to vi. Don't worry, I will guide you along,
+if need  be. All you have to  do at any time  you are stuck is type in
+"help" and  then a space.  I will  ask you what  you want help on, and
+tell you about that. There is  a manual for  this mode, and it will be
+useful if you could have it around. 
+
+  Next time on I  will suppress this welcome message  -- I will assume
+that you have got some familiarity with the VHDL  mode. The only thing
+you really have to remember is typing a space after "help".
+
+  For your information,  this mode was  created by Vijay A. Nebhrajani
+of the Hardware Group of Centre for Development of Advanced Computing,
+Pune,  INDIA. Get  to him  at vijayn@parcom.ernet.in if  you  have any
+suggestions or if you need any kind of help. Welcome again!

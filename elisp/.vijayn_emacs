@@ -1,0 +1,228 @@
+;; Setup
+(display-time)
+(transient-mark-mode t)
+(setq display-time-day-and-date 't)
+(setq inhibit-startup-message 't)
+(setq manual-program "/usr/bin/man")
+(setq shell-prompt-pattern "^\[[a-z0-9A-Z/]*\]")
+(setq tex-default-mode 'latex-mode)
+(fset 'yes-or-no-p 'y-or-n-p)
+(define-key global-map "\M-\C-m" 'compile)
+
+(defvar mail-default-headers "Reply-To: vijay.nebhrajani@gmail.com\n")
+(define-key esc-map " " 'set-mark-command)
+;;(add-hook 'diary-hook 'appt-make-list)
+;;(setq diary-file "~vijayn/personal/diary")
+
+;; Variable settings for gnus
+;;(setq gnus-local-domain "octopus.cdac.ernet.in")
+(setq gnus-novice-user '())
+;;(diary)
+;; My key mappings
+(setq compile-command "make deliver")
+
+(define-key global-map "\C-u" 'advertised-undo)
+(define-key global-map "\C-h" 'backward-delete-char)
+(define-key global-map "\C-l" 'redraw-display)
+
+(setq c-basic-offset 2)
+
+(setq c-mode-hook
+      (function (lambda ()
+		  (setq c-brace-offset -2 c-auto-newline 't)
+                  (setq c-basic-offset 2)
+		  (local-set-key "\C-c\C-c" 'c-insert-comment)
+		  (local-set-key (quote [f12]) (quote dabbrev-expand))
+		  (local-set-key "\C-c\C-r" 'make-regexp-for-word))))
+
+(setq c++-mode-hook
+      (function (lambda ()
+;;		  (define-key c-mode-map "{" 'electric-c-semi)
+		  (setq c-brace-offset -2 c-auto-newline 't)
+                  (setq c-basic-offset 2)
+                  (setq c-default-style "stroustrup")
+		  (local-set-key "\C-c\C-c" 'c-insert-comment)
+		  (local-set-key (quote [f12]) (quote dabbrev-expand))
+		  (local-set-key "\C-c\C-r" 'make-regexp-for-word))))
+
+
+(setq TeX-mode-hook
+      (function (lambda ()
+		  (setq fill-column 80)
+                  (local-unset-key " ")
+		  (local-set-key " " 'self-insert-command)
+		  (turn-on-auto-fill))))
+
+(setq mail-mode-hook
+      (function (lambda ()
+		  (load "mail-utils"))))
+
+;; Use "y or n" answers instead of full words "yes or no"
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; VHDL Mode setup.
+
+(defun prepend-path ( my-path )
+  (setq load-path (cons (expand-file-name my-path) load-path)))
+               
+(defun append-path ( my-path )
+  (setq load-path (append load-path (list (expand-file-name my-path)))))
+
+;; Look first in the directory ~/elisp for elisp files
+(prepend-path "~/emacs")
+
+(load-file "/auto/common/vijayn/emacs/verilog-mode.el")
+
+(autoload 'verilog-mode "verilog-mode" "Verilog mode" t )
+
+;; Any files that end in .v should be in verilog mode
+(setq auto-mode-alist (cons  '("\\.v\\'" . verilog-mode) auto-mode-alist))
+
+;; Any files in verilog mode should have their keywords colorized
+(add-hook 'verilog-mode-hook 
+	  '(lambda () 
+	     (setq paragraph-start "^\\|$")
+	     (setq paragraph-separate "^\\|$")
+	     (font-lock-mode 1)
+	     ))
+
+(setq font-lock-face-attributes
+      '((font-lock-comment-face "Brown")
+	(font-lock-string-face "RosyBrown")
+	(font-lock-keyword-face "Purple")
+	(font-lock-function-name-face "Blue")
+	(font-lock-variable-name-face "DarkGoldenrod")
+	(font-lock-type-face "DarkOliveGreen")
+	(font-lock-reference-face "CadetBlue")))
+
+(require 'cc-mode)
+(require 'font-lock)               
+(load-file "/auto/common/vijayn/emacs/make-regexp.el")
+(load-file "/auto/common/vijayn/emacs/flex-mode.el")
+(load-file "/auto/common/vijayn/emacs/bison-mode.el")
+
+;; Load verilog mode only when needed
+;; Load flex mode only when needed
+(autoload 'flex-mode "flex-mode" "Flex mode" t )
+
+;; Any files that end in .l, .ll and .lex should be in flex mode
+;; (setq auto-mode-alist (cons  '("\\.l\\'" . flex-mode) auto-mode-alist))
+;; (setq auto-mode-alist (cons  '("\\.ll\\'" . flex-mode) auto-mode-alist))
+;; (setq auto-mode-alist (cons  '("\\.lex\\'" . flex-mode) auto-mode-alist))
+
+;; Load bison mode only when needed
+(autoload 'bison-mode "bison-mode" "Bison mode" t )
+
+;; Any files that end in .l, .ll and .lex should be in bison mode
+;;(add-to-set! auto-mode-alist '("\\.y$" . bison-mode))
+;;(setq auto-mode-alist (cons  '("\\.y$\\'" . bison-mode) auto-mode-alist))
+;;(setq auto-mode-alist (cons  '("\\.yy\\'" . bison-mode) auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\\.[Cc][Xx][Xx]$" . c++-mode)
+                ("\\.[Cc][Pp][Pp]$" . c++-mode)
+                ("\\.[Hh][Xx][Xx]$" . c++-mode)
+                ("\\.[Tt][Cc][Cc]$" . c++-mode)
+                ("\\.h$" . c++-mode)
+                ("\\.i$" . c++-mode)    ; SWIG
+                ("\\.mm?$" . objc-mode)
+                ("_emacs" . lisp-mode)
+                ("\\.el\\.gz$" . lisp-mode)
+                ("\\.mak$" . makefile-mode)
+                ("\\.conf$" . conf-mode)
+                ("\\.go$" .  go-mode)
+                ("\\.uncompressed$" . hexl-mode)
+                ("\\.ke$" . kepago-mode)
+                ("\\.markdown$" . markdown-mode)
+                ("\\.md$" . markdown-mode)
+                ("\\.textile$" . textile-mode)
+                ("\\.kfn$" . kfn-mode)
+                ("\\.gyp$" . gyp-mode)
+                ("\\.gypi$" . gyp-mode)
+                ("\\.rb$" . ruby-mode)
+                ("\\.cml$" . xml-mode)
+                ("\\.cg$" . cg-mode)
+                ("\\.y$" . bison-mode)
+                ("\\.yy$" . bison-mode)
+                ("\\.yp$" . bison-mode)
+                ("\\.l$" . flex-mode)
+                ("\\.ll$" . flex-mode)
+                ("\\.lex$" . flex-mode)
+                ("\\.lua$" . lua-mode)
+                ("\\.org$" . org-mode)
+                ("\\.scons$" . python-mode)
+                ("SCons\\(cript\\|truct\\)" . python-mode)
+                ("\\.gclient$" . python-mode)
+                ) auto-mode-alist))
+
+
+(global-set-key "\M-a" 'tab-two-spaces)
+
+(setq auto-mode-alist (cons '("\\.txt$"          . text-mode)   auto-mode-alist))
+
+(autoload 'dcsh-mode "dcsh-mode" "DC Shell" t)
+(setq auto-mode-alist (cons '("\\.scr\\'" . dcsh-mode) auto-mode-alist))
+
+  
+;;**********************************************************************
+;; get rid of the toolbar on top of the window
+(tool-bar-mode 0)
+
+(set-background-color "white")
+(put 'upcase-region 'disabled nil)
+(line-number-mode 1)
+(put 'downcase-region 'disabled nil)
+;(mouse-set-font "-sony-fixed-medium-r-normal--16-120-100-100-c-80-*-1")
+;(mouse-set-font "-adobe-courier-medium-r-normal--*-100-100-100-m-*-iso8859-1")
+
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(font-lock-comment-face ((t (:italic t :foreground "brown")))))
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(c-basic-offset 2)
+ '(case-fold-search t)
+ '(completion-styles (quote (basic partial-completion emacs22)))
+ '(current-language-environment "UTF-8")
+ '(default-input-method "rfc1345")
+ '(global-font-lock-mode t nil (font-lock))
+ '(lpr-command "lp")
+ '(printer-name "sjc06-02-c612-c")
+ '(ps-lpr-command "lp")
+ '(show-paren-mode t nil (paren))
+ '(split-width-threshold nil)
+ '(transient-mark-mode t))
+
+(load-file "/auto/common/vijayn/emacs/emacs-keys.el")
+
+;;(put 'eval-expression 'disabled nil)
+
+;; Enable wheelmouse support by default
+;(require 'mwheel) ; Emacs
+
+(mouse-wheel-mode t)
+
+;; Make sure that spacebar completes filenames. To actually have a space in a file name
+;; use C-q space. Thus a file called "A file.txt" can be opened by doing
+;; M-x find-file A C-q SPC file.txt
+(define-key minibuffer-local-filename-completion-map " " 'minibuffer-complete-word)
+(define-key minibuffer-local-must-match-filename-map " " 'minibuffer-complete-word)
+
+
+(setq-default indent-tabs-mode nil)
+(setq c-default-style "k&r")
+
+;; Hack to allow C-c C-f RET to reopen current file rather than open dired
+(defun find-file-read-args (prompt mustmatch)
+  (list (let ((find-file-default
+               (and buffer-file-name
+                    (abbreviate-file-name buffer-file-name))))
+          (read-file-name prompt nil find-file-default mustmatch))
+        t))

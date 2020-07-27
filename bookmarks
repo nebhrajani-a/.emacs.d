@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("floobits-adityaoge3-24169"
+ (filename . "~/ebooks/concrete_mathematics/notes.org")
+ (front-context-string . "her:\n   \\begin{e")
+ (rear-context-string . "ting these toget")
+ (position . 845))
+)
