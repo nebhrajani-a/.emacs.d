@@ -5,3 +5,11 @@
 /company-stat*
 /ido*
 /places
+/.cache
+/emojis
+/xkcd
+/games
+/request
+*~
+/auto-save-list
+/transient
