@@ -1,13 +1,0 @@
-;;; xbm-life-autoloads.el --- automatically extracted autoloads
-;;
-;;; Code:
-
-
-(provide 'xbm-life-autoloads)
-;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; no-update-autoloads: t
-;; coding: utf-8
-;; End:
-;;; xbm-life-autoloads.el ends here
