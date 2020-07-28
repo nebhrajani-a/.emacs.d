@@ -1,21 +1,21 @@
 
 ;; ----- smex-history -----
 (
- package-delete
+ spotify-play
+ spotify-pause
+ spotify-next
  package-install
- company-statistics-mode
+ package-delete
  org-latex-export-to-pdf
- yas-new-snippet
- customize-variable
- org-html-export-to-html
+ orgtbl-mode
 )
 
 ;; ----- smex-data -----
 (
- (package-list-packages . 18)
+ (package-list-packages . 20)
  (5x5 . 1)
  (gdb . 2)
- (package-install . 94)
+ (package-install . 99)
  (powerline-vim-theme . 3)
  (powerline-default-theme . 2)
  (powerline-evil-vim-theme . 3)
@@ -32,7 +32,7 @@
  (company-yasnippet . 22)
  (yas-global-mode . 7)
  (yas/expand . 6)
- (yas/describe-tables . 14)
+ (yas/describe-tables . 15)
  (recover-this-file . 2)
  (org-export-as-pdf . 41)
  (org-export-as-html . 1)
@@ -44,7 +44,7 @@
  (table-fixed-width-mode . 2)
  (imenu-add-to-menubar . 1)
  (file-cache-add-directory-list . 1)
- (eval-region . 45)
+ (eval-region . 48)
  (new-frame . 2)
  (evil-commentary-mode . 1)
  (calendar . 2)
@@ -89,14 +89,14 @@
  (viper-mode . 1)
  (viper-go-away . 1)
  (org-evil-mode . 1)
- (spotify-play . 6)
+ (spotify-play . 13)
  (version . 4)
  (ispell . 5)
  (smartparens-mode . 1)
  (electric-pair-mode . 2)
  (autopair-mode . 1)
  (save-place-mode . 2)
- (spotify-pause . 1)
+ (spotify-pause . 7)
  (spaceline-install . 1)
  (fancy-battery-mode . 3)
  (gnus-article-outlook-repair-attribution . 1)
@@ -113,9 +113,9 @@
  (company-emoji-init . 3)
  (emojify-debug-mode . 2)
  (emojify-download-emoji . 6)
- (package-reinstall . 2)
+ (package-reinstall . 6)
  (smex . 1)
- (org-latex-export-to-pdf . 127)
+ (org-latex-export-to-pdf . 163)
  (line-number-mode . 10)
  (hl-line-mode . 1)
  (treemacs . 11)
@@ -169,8 +169,8 @@
  (pyvenv-menu . 1)
  (elpy-config . 2)
  (ispell-word . 1)
- (org-beamer-mode . 1)
- (org-beamer-export-to-pdf . 6)
+ (org-beamer-mode . 2)
+ (org-beamer-export-to-pdf . 42)
  (org-beamer-select-environment . 1)
  (list-coding-systems . 1)
  (recode-region . 2)
@@ -181,5 +181,21 @@
  (org-html-export-to-html . 2)
  (yas-new-snippet . 2)
  (company-statistics-mode . 2)
- (package-delete . 2)
+ (package-delete . 5)
+ (search-forward-regexp . 42)
+ (magit . 16)
+ (magit-run . 1)
+ (magit-mode . 2)
+ (magit-push . 1)
+ (magithub-dashboard . 4)
+ (magit-status . 1)
+ (dired-mark . 1)
+ (spotify-next . 2)
+ (spotify-enable-song-notifications . 1)
+ (spotify-current . 1)
+ (global-spotify-remote-mode . 15)
+ (spotify-volume-up . 1)
+ (spotify-next-track . 2)
+ (spotify-toggle-play . 1)
+ (spotify-remote-mode . 5)
 )

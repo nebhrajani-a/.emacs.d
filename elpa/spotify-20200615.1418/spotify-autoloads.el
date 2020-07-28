@@ -1,10 +1,10 @@
 ;;; spotify-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "spotify" "spotify.el" (24302 13211 560255
-;;;;;;  950000))
+;;;### (autoloads nil "spotify" "spotify.el" (24350 55229 365745
+;;;;;;  429000))
 ;;; Generated autoloads from spotify.el
  (autoload 'spotify-play "spotify" "Call Play on spotify player." t)
  (autoload 'spotify-pause "spotify" "Call Pause on spotify player." t)
@@ -18,16 +18,9 @@
 
 ;;;***
 
-;;;### (autoloads nil nil ("spotify-pkg.el") (24302 13211 593280
-;;;;;;  951000))
-
-;;;***
-
-(provide 'spotify-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; spotify-autoloads.el ends here
