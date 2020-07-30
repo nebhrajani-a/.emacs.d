@@ -735,7 +735,7 @@
       (message "Opening file...")
     (message "Aborting")))
 
-;; ────────────────── Recursive minibuffer with mode ──────────────────
+;; ─────────────── Recursive minibuffer with depth mode ───────────────
 (setq enable-recursive-minibuffers t)
 (minibuffer-depth-indicate-mode)
 
