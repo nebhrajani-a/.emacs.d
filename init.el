@@ -4,7 +4,6 @@
 ;;      ██    ██    ██   ██ ██   ██    ██        ██    ██ ██          ██  ██  ██    ██        ██      ██    ██ ██  ██ ██ ██      ██ ██    ██
 ;; ███████    ██    ██   ██ ██   ██    ██         ██████  ██          ██      ██    ██         ██████  ██████  ██   ████ ██      ██  ██████
 
-
 ;; Setup
 (setq user-full-name "Aditya V. Nebhrajani"
       user-mail-address "aditya.v.nebhrajani@gmail.com"
@@ -243,28 +242,29 @@
 (require 'bind-key)
 (setq use-package-always-ensure t)
 
-;; Use the Spacemacs dark theme
-(use-package spacemacs-theme
-  :defer t)
+;; ;; Use the Spacemacs dark theme
+;; (use-package spacemacs-theme
+;;   :defer t)
 
-(defun transparency (value)
-  "Sets the transparency of the frame window. 0=transparent/100=opaque."
-  (interactive "nTransparency Value 0 - 100 opaque:")
-  (set-frame-parameter (selected-frame) 'alpha value))
+;; (defun transparency (value)
+;;   "Sets the transparency of the frame window. 0=transparent/100=opaque."
+;;   (interactive "nTransparency Value 0 - 100 opaque:")
+;;   (set-frame-parameter (selected-frame) 'alpha value))
 
-(defun apply-theme ()
-  "Apply the `spacemacs-dark' theme and make frames just slightly transparent."
-  (interactive)
-  (load-theme 'spacemacs-dark t)
-  (transparency 100))
+;; (defun apply-theme ()
+;;   "Apply the `spacemacs-dark' theme and make frames just slightly transparent."
+;;   (interactive)
+;;   (load-theme 'spacemacs-dark t)
+;;   (transparency 100))
 
-;; If this code is being evaluated by emacs --daemon, ensure that each subsequent frame is themed appropriately.
+;; ;; If this code is being evaluated by emacs --daemon, ensure that each subsequent frame is themed appropriately.
+;; (if (daemonp)
+;;     (add-hook 'after-make-frame-functions
+;;               (lambda (frame)
+;;                 (with-selected-frame frame (apply-theme))))
+;;   (apply-theme))
 
-(if (daemonp)
-    (add-hook 'after-make-frame-functions
-              (lambda (frame)
-                (with-selected-frame frame (apply-theme))))
-  (apply-theme))
+(load-theme 'atom-one-dark t)
 
 ;; Auto-fill mode on, set fill-column 100
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
@@ -770,6 +770,7 @@
 (setq twittering-use-master-password t)
 (global-set-key (kbd "C-x t") 'twit)
 
+
 ;; ███████ ███    ██ ██████       ██████  ███████     ███    ███ ██    ██      ██████  ██████  ███    ██ ███████ ██  ██████
 ;; ██      ████   ██ ██   ██     ██    ██ ██          ████  ████  ██  ██      ██      ██    ██ ████   ██ ██      ██ ██
 ;; █████   ██ ██  ██ ██   ██     ██    ██ █████       ██ ████ ██   ████       ██      ██    ██ ██ ██  ██ █████   ██ ██   ███
@@ -807,18 +808,23 @@
  '(current-language-environment "UTF-8")
  '(custom-safe-themes
    (quote
-    ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "0d456bc74e0ffa4bf5b69b0b54dac5104512c324199e96fc9f3a1db10dfa31f3" "27b97024320d223cbe0eb73104f2be8fcc55bd2c299723fc61d20057f313b51c" default)))
+    ("d1af5ef9b24d25f50f00d455bd51c1d586ede1949c5d2863bef763c60ddf703a" "5b7c31eb904d50c470ce264318f41b3bbc85545e4359e6b7d48ee88a892b1915" "614a8fc7db02cb99d9f1acf1297b26f8224cf80bf6c0ec31d30c431503e8b59f" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "5d09b4ad5649fea40249dd937eaaa8f8a229db1cec9a1a0ef0de3ccf63523014" "7b3d184d2955990e4df1162aeff6bfb4e1c3e822368f0359e15e2974235d9fa8" "79278310dd6cacf2d2f491063c4ab8b129fee2a498e4c25912ddaa6c3c5b621e" "c4bdbbd52c8e07112d1bfd00fee22bf0f25e727e95623ecb20c4fa098b74c1bd" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "0d456bc74e0ffa4bf5b69b0b54dac5104512c324199e96fc9f3a1db10dfa31f3" "27b97024320d223cbe0eb73104f2be8fcc55bd2c299723fc61d20057f313b51c" default)))
  '(default-input-method "rfc1345")
  '(delete-selection-mode t)
  '(doc-view-continuous t)
  '(doc-view-resolution 400)
  '(emojify-emoji-set "emojione-v2.2.6-22")
  '(evil-want-keybinding nil)
+ '(fci-rule-color "#405A61")
  '(global-font-lock-mode t nil (font-lock))
  '(ido-mode (quote both) nil (ido))
  '(initial-scratch-message "*Nebhrajani A.'s scratch buffer. You shouldn't be here.*
 ")
+ '(jdee-db-active-breakpoint-face-colors (cons "#073642" "#268bd2"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#073642" "#859900"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#073642" "#56697A"))
  '(lpr-command "lp")
+ '(objed-cursor-color "#dc322f")
  '(org-agenda-files
    (quote
     ("~/agenda/bt.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
@@ -865,12 +871,14 @@
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company company-tabnine howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company company-tabnine howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
  '(powerline-height nil)
  '(printer-name "sjc06-02-c612-c")
  '(ps-lpr-command "lp")
+ '(rustic-ansi-faces
+   ["#002b36" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#839496"])
  '(safe-local-variable-values (quote ((emacs-lisp-docstring-fill-column . 75))))
  '(shell-pop-shell-type
    (quote
@@ -887,8 +895,29 @@
  '(smooth-scrolling-mode t)
  '(spaceline-show-default-input-method t)
  '(split-width-threshold nil)
- '(transient-mark-mode t))
-
+ '(transient-mark-mode t)
+ '(vc-annotate-background "#002b36")
+ '(vc-annotate-color-map
+   (list
+    (cons 20 "#859900")
+    (cons 40 "#959300")
+    (cons 60 "#a58e00")
+    (cons 80 "#b58900")
+    (cons 100 "#bc7407")
+    (cons 120 "#c35f0e")
+    (cons 140 "#cb4b16")
+    (cons 160 "#cd4439")
+    (cons 180 "#d03d5d")
+    (cons 200 "#d33682")
+    (cons 220 "#d63466")
+    (cons 240 "#d9334a")
+    (cons 260 "#dc322f")
+    (cons 280 "#ba3f41")
+    (cons 300 "#994d54")
+    (cons 320 "#775b67")
+    (cons 340 "#405A61")
+    (cons 360 "#405A61")))
+ '(vc-annotate-very-old-color nil))
 
 (use-package evil-mc
   :load-path "~/.emacs.d/elpa/evil-mc-20200228.1535/")
