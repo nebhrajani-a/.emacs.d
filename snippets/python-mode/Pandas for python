@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Pandas for python
+# key: pd
+# --
+import pandas as pd

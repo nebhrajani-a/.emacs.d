@@ -770,6 +770,7 @@
 (setq twittering-use-master-password t)
 (global-set-key (kbd "C-x t") 'twit)
 
+(company-quickhelp-mode)
 
 ;; ███████ ███    ██ ██████       ██████  ███████     ███    ███ ██    ██      ██████  ██████  ███    ██ ███████ ██  ██████
 ;; ██      ████   ██ ██   ██     ██    ██ ██          ████  ████  ██  ██      ██      ██    ██ ████   ██ ██      ██ ██
@@ -796,7 +797,7 @@
  '(company-backends
    (quote
     ((company-keywords)
-     company-elisp company-emoji company-nxml company-dabbrev company-css company-eclim company-semantic company-bbdb company-xcode company-cmake company-capf company-files
+     company-elisp company-emoji company-yasnippet company-nxml company-dabbrev company-css company-eclim company-semantic company-bbdb company-xcode company-cmake company-capf company-files
      (company-dabbrev-code company-gtags company-etags)
      company-oddmuse company-dabbrev-code)))
  '(company-frontends
@@ -871,7 +872,7 @@
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company company-tabnine howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
  '(powerline-height nil)
