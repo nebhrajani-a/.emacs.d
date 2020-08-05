@@ -770,7 +770,15 @@
 (setq twittering-use-master-password t)
 (global-set-key (kbd "C-x t") 'twit)
 
+;; ────── Enable company quickhelp mode (tooltip documentation) ─────
 (company-quickhelp-mode)
+
+;; ──── Enables source code block background darkening in org-mode ────
+(require 'color)
+(set-face-attribute 'org-block nil :background
+                    (color-darken-name
+                     (face-attribute 'default :background) 2))
+
 
 ;; ███████ ███    ██ ██████       ██████  ███████     ███    ███ ██    ██      ██████  ██████  ███    ██ ███████ ██  ██████
 ;; ██      ████   ██ ██   ██     ██    ██ ██          ████  ████  ██  ██      ██      ██    ██ ████   ██ ██      ██ ██
