@@ -1,9 +1,3 @@
-;; ███████ ████████  █████  ██████  ████████      ██████  ███████     ███    ███ ██    ██      ██████  ██████  ███    ██ ███████ ██  ██████
-;; ██         ██    ██   ██ ██   ██    ██        ██    ██ ██          ████  ████  ██  ██      ██      ██    ██ ████   ██ ██      ██ ██
-;; ███████    ██    ███████ ██████     ██        ██    ██ █████       ██ ████ ██   ████       ██      ██    ██ ██ ██  ██ █████   ██ ██   ███
-;;      ██    ██    ██   ██ ██   ██    ██        ██    ██ ██          ██  ██  ██    ██        ██      ██    ██ ██  ██ ██ ██      ██ ██    ██
-;; ███████    ██    ██   ██ ██   ██    ██         ██████  ██          ██      ██    ██         ██████  ██████  ██   ████ ██      ██  ██████
-
 ;; Setup
 (setq user-full-name "Aditya V. Nebhrajani"
       user-mail-address "aditya.v.nebhrajani@gmail.com"
@@ -27,48 +21,26 @@
 ;; (setq frame-title-format '("emacs"))
 (setq evil-want-keybinding t)
 
-;; My key mappings
-(setq compile-command "make deliver")
-
 ;; (define-key global-map "\C-u" 'advertised-undo)
 (define-key global-map "\C-l" 'redraw-display)
 (define-key global-map "\C-x\C-a" 'replace-string)
-(define-key global-map "\M-\C-m" 'compile)
 (global-set-key (kbd "M-o") 'other-window)
 
-;; Electric Buffer List Mode
+;; (define-prefix-command 'space-map)
+;; (global-set-key (kbd "SPC") 'space-map)
+;; (define-key space-map (kbd "x") 'smex)
+;; (define-key space-map (kbd "z") 'keyboard-quit)
+;; Buffer List Mode
 (global-set-key "\C-x\C-b" 'buffer-menu-other-window)
-
 
 (setq c-basic-offset 2)
 
 (setq c-mode-hook
       (function (lambda ()
 		  (setq c-brace-offset -2 c-auto-newline 't)
-                  (setq c-basic-offset 2)
-		  (local-set-key "\C-c\C-c" 'c-insert-comment)
-		  (local-set-key (quote [f12]) (quote dabbrev-expand))
-		  (local-set-key "\C-c\C-p" 'make-regexp-for-word))))
+                  (setq c-basic-offset 2))))
 
-(setq c++-mode-hook
-      (function (lambda ()
-;;		  (define-key c-mode-map "{" 'electric-c-semi)
-		  (setq c-brace-offset -2 c-auto-newline 't)
-                  (setq c-basic-offset 2)
-                  (setq c-default-style "stroustrup")
-		  (local-set-key "\C-c\C-c" 'c-insert-comment)
-		  (local-set-key (quote [f12]) (quote dabbrev-expand))
-		  (local-set-key "\C-c\C-p" 'make-regexp-for-word))))
-
-(setq TeX-mode-hook
-      (function (lambda ()
-		  (setq fill-column 100)
-		  (turn-on-auto-fill))))
-
-
-;; (setq mail-mode-hook
-;;       (function (lambda ()
-;; 		  (load "mail-utils"))))
+(setq c-default-style "k&r")
 
 ;; Use "y or n" answers instead of full words "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -83,17 +55,16 @@
 
 
 ;; Any files that end in .l, .ll and .lex should be in flex mode
-;; (setq auto-mode-alist (cons  '("\\.l\\'" . flex-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons  '("\\.ll\\'" . flex-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons  '("\\.lex\\'" . flex-mode) auto-mode-alist))
+(setq auto-mode-alist (cons  '("\\.l\\'" . flex-mode) auto-mode-alist))
+(setq auto-mode-alist (cons  '("\\.ll\\'" . flex-mode) auto-mode-alist))
+(setq auto-mode-alist (cons  '("\\.lex\\'" . flex-mode) auto-mode-alist))
 
 ;; Load bison mode only when needed
 (autoload 'bison-mode "bison-mode" "Bison mode" t )
 
 ;; Any files that end in .l, .ll and .lex should be in bison mode
-;;(add-to-set! auto-mode-alist '("\\.y$" . bison-mode))
-;;(setq auto-mode-alist (cons  '("\\.y$\\'" . bison-mode) auto-mode-alist))
-;;(setq auto-mode-alist (cons  '("\\.yy\\'" . bison-mode) auto-mode-alist))
+(setq auto-mode-alist (cons  '("\\.y$\\'" . bison-mode) auto-mode-alist))
+(setq auto-mode-alist (cons  '("\\.yy\\'" . bison-mode) auto-mode-alist))
 
 (setq auto-mode-alist
       (append '(("\\.[Cc][Xx][Xx]$" . c++-mode)
@@ -132,39 +103,16 @@
                 ("\\.gclient$" . python-mode)
                 ) auto-mode-alist))
 
-
-
 (setq auto-mode-alist (cons '("\\.txt$"          . text-mode)   auto-mode-alist))
 
 (autoload 'dcsh-mode "dcsh-mode" "DC Shell" t)
 (setq auto-mode-alist (cons '("\\.scr\\'" . dcsh-mode) auto-mode-alist))
 
-
-;; Get rid of the toolbar on top of the window
-(tool-bar-mode 0)
-
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)
-
 (load-file "~/.emacs.d/elisp/emacs-keys.el")
 
-;;(put 'eval-expression 'disabled nil)
-
-(setq c-default-style "k&r")
-
-;; Hack to allow C-c C-f RET to reopen current file rather than open dired
-(defun find-file-read-args (prompt mustmatch)
-  (list (let ((find-file-default
-               (and buffer-file-name
-                    (abbreviate-file-name buffer-file-name))))
-          (read-file-name prompt nil find-file-default mustmatch))
-        t))
 
 ;; Look first in the directory ~/elisp for elisp files
-(prepend-path "~/emacs")
-
 (load-file "~/.emacs.d/elisp/verilog-mode.el")
-
 (autoload 'verilog-mode "verilog-mode" "Verilog mode" t )
 
 ;; Any files that end in .v should be in verilog mode
@@ -197,12 +145,12 @@
 ;; Load flex mode only when needed
 (autoload 'flex-mode "flex-mode" "Flex mode" t )
 
-;; Company setup
+;; ──────────────────────── Some company setup ────────────────────────
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-idle-delay 0)
 (setq company-minimum-prefix-length 3)
 
-;; make `company-backends' local is critcal or else, completion in every major mode
+;; Make `company-backends' local is critcal or else, completion in every major mode
 (defun english-mode-hook-setup ()
   (make-local-variable 'company-backends)
   (add-to-list 'company-backends 'company-ispell)
@@ -241,6 +189,14 @@
   (require 'use-package))
 (require 'bind-key)
 (setq use-package-always-ensure t)
+
+;; Company setup
+(use-package company
+  :init
+  (setq company-require-match nil)            ; Don't require match
+  (setq company-tooltip-align-annotations t)  ; Align annotation to the right side.
+  (setq company-eclim-auto-save nil)          ; Stop eclim auto save.
+  (setq company-dabbrev-downcase nil))         ; No downcase when completion.
 
 ;; ;; Use the Spacemacs dark theme
 ;; (use-package spacemacs-theme
@@ -284,6 +240,8 @@
 
 ;; Globally use undo-tree mode
 (global-undo-tree-mode 1)
+(setq undo-tree-auto-save-history t)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 
 ;; Markdown mode
 (autoload 'markdown-mode "markdown-mode"
@@ -309,6 +267,44 @@
 
 ;; Smartparens Mode
 (smartparens-global-mode 1)
+
+
+;; ────────────────────── Recent files with ido ─────────────────────
+(require 'recentf)
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+;; enable recent files mode.
+(recentf-mode t)
+(setq recentf-max-saved-items 50)
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
+
+
+;; ─────────────────────────── Evil-leader ──────────────────────────
+(require 'evil-leader)
+(global-evil-leader-mode)
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key
+  "f" 'find-file
+  "b" 'switch-to-buffer
+  "k" 'kill-current-buffer
+  "x" 'smex
+  "1" 'delete-other-windows
+  "2" 'split-window-below-and-switch
+  "3" 'split-window-right-and-switch
+  "0" 'delete-window
+  "z" 'suspend-frame
+  "d" 'treemacs
+  "o" 'other-window
+  "r" 'ido-recentf-open
+  "g" 'magit
+  "s" 'save-buffer
+  "t" 'shell-pop)
 
 ;; Evil mode setup
 (require 'evil)
@@ -446,8 +442,8 @@
 (setq dired-recursive-copies 'always)
 
 ;; Fuzzy matching in dired using /
-(require 'dired)
-(define-key dired-mode-map (kbd "/") 'dired-narrow-fuzzy)
+;; (require 'dired)
+;; (define-key dired-mode-map (kbd "/") 'dired-narrow-fuzzy)
 
 ;; Auto refresh files that change somewhere else
 (global-auto-revert-mode t)
@@ -498,6 +494,8 @@
 
 ;; Use flycheck globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(with-eval-after-load 'flycheck
+  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 
 ;; Evil-surround setup
 (require 'evil-surround)
@@ -709,7 +707,8 @@
 (add-hook 'prog-mode-hook 'linum-relative-mode)
 (add-hook 'text-mode-hook 'linum-relative-mode)
 
-(evilem-default-keybindings "SPC")
+;; ───────────────────────── Evil-easymotion ────────────────────────
+(evilem-default-keybindings ",")
 
 ;; ──────────────────────────── Elpy setup ────────────────────────────
 (elpy-enable)
@@ -720,21 +719,6 @@
 ;; ─────────────────────────── Magit setup ──────────────────────────
 (global-set-key (kbd "C-x g") 'magit-status)
 
-;; ────────────────────── Recent files with ido ─────────────────────
-(require 'recentf)
-;; get rid of `find-file-read-only' and replace it with something
-;; more useful.
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
-;; enable recent files mode.
-(recentf-mode t)
-(setq recentf-max-saved-items 50)
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to \\[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
-
 ;; ─────────────── Recursive minibuffer with depth mode ───────────────
 (setq enable-recursive-minibuffers t)
 (minibuffer-depth-indicate-mode)
@@ -743,15 +727,15 @@
 ;; Note that this works well for me since I use evil's visual mode for
 ;; selection. Still, it shouldn't cause issues otherwise either.
 (defun push-mark-no-activate ()
-  "Pushes `point' to `mark-ring' and does not activate the region
-   Equivalent to \\[set-mark-command] when \\[transient-mark-mode] is disabled"
+  "Pushes `point' to `mark-ring' and does not activate the region.
+Equivalent to \\[set-mark-command] when \\[transient-mark-mode] is disabled"
   (interactive)
   (push-mark (point) t nil)
   (message "Pushed mark to ring"))
 (global-set-key (kbd "C-`") 'push-mark-no-activate)
 (defun jump-to-mark ()
   "Jumps to the local mark, respecting the `mark-ring' order.
-  This is the same as using \\[set-mark-command] with the prefix argument."
+This is the same as using \\[set-mark-command] with the prefix argument."
   (interactive)
   (set-mark-command 1))
 (global-set-key (kbd "M-`") 'jump-to-mark)
@@ -779,13 +763,58 @@
                     (color-darken-name
                      (face-attribute 'default :background) 2))
 
+;; ───────────────────── Org-mode prettification ────────────────────
+(add-hook 'org-mode-hook (lambda ()
+   "Beautify Org Checkbox Symbol"
+   (push '("[ ]" .  "☐") prettify-symbols-alist)
+   (push '("[X]" . "✓" ) prettify-symbols-alist)
+   (push '("[-]" . "○" ) prettify-symbols-alist)
+   (prettify-symbols-mode)))
 
-;; ███████ ███    ██ ██████       ██████  ███████     ███    ███ ██    ██      ██████  ██████  ███    ██ ███████ ██  ██████
-;; ██      ████   ██ ██   ██     ██    ██ ██          ████  ████  ██  ██      ██      ██    ██ ████   ██ ██      ██ ██
-;; █████   ██ ██  ██ ██   ██     ██    ██ █████       ██ ████ ██   ████       ██      ██    ██ ██ ██  ██ █████   ██ ██   ███
-;; ██      ██  ██ ██ ██   ██     ██    ██ ██          ██  ██  ██    ██        ██      ██    ██ ██  ██ ██ ██      ██ ██    ██
-;; ███████ ██   ████ ██████       ██████  ██          ██      ██    ██         ██████  ██████  ██   ████ ██      ██  ██████
+(defface org-checkbox-done-text
+  '((t (:foreground "#71696A" :strike-through t)))
+  "Face for the text part of a checked org-mode checkbox.")
 
+(font-lock-add-keywords
+ 'org-mode
+ `(("^[ \t]*\\(?:[-+*]\\|[0-9]+[).]\\)[ \t]+\\(\\(?:\\[@\\(?:start:\\)?[0-9]+\\][ \t]*\\)?\\[\\(?:X\\|\\([0-9]+\\)/\\2\\)\\][^\n]*\n\\)"
+    1 'org-checkbox-done-text prepend))
+ 'append)
+
+(add-hook 'treemacs-mode-hook (lambda ()
+    (setq buffer-face-mode-face `(:background "#232830"))
+    (linum-relative-off)
+    (buffer-face-mode 1)))
+
+;; ─────────────────────────── Ediff setup ──────────────────────────
+(setq ediff-split-window-function 'split-window-horizontally)
+
+;; ────────────────────── Company fuzzy matching ──────────────────────
+;; (add-hook 'text-mode-hook '(company-fuzzy-mode 1))
+;; (add-hook 'emacs-lisp-mode-hook '(company-fuzzy-mode 1))
+;; (global-company-fuzzy-mode 1)
+
+;; ─────────────────────── Python checker setup ───────────────────────
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq flycheck-python-pylint-executable "python3")))
+
+
+;; ─────────────────────── Unbind q from macros ───────────────────────
+(define-key evil-normal-state-map (kbd "q") nil)
+
+;; ──────────── Key-sequences setup (Key-Chord Dependency) ────────────
+(load-file "~/.emacs.d/elisp/key-chord.el")
+(load-file "~/.emacs.d/elisp/key-seq.el")
+
+(key-chord-mode 1)
+(key-seq-define-global "qs" 'save-buffer)
+
+;; ────────── Use qw to escape from anything and everything ─────────
+(evil-escape-mode 1)
+(setq-default evil-escape-key-sequence "qw")
+
+;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-faces
@@ -822,9 +851,16 @@
  '(delete-selection-mode t)
  '(doc-view-continuous t)
  '(doc-view-resolution 400)
+ '(ediff-make-buffers-readonly-at-startup t)
  '(emojify-emoji-set "emojione-v2.2.6-22")
  '(evil-want-keybinding nil)
+ '(evil-want-minibuffer nil)
  '(fci-rule-color "#405A61")
+ '(flycheck-pycheckers-checkers (quote (pylint)))
+ '(flycheck-pycheckers-ignore-codes
+   (quote
+    ("C0301" "C0326" "C0325" "C0411" "C0413" "C0103" "C0111" "W0142" "W0201" "W0232" "W0403" "W0511" "E1002" "E1101" "E1103" "R0201" "R0801" "R0903" "R0904" "R0914")))
+ '(flycheck-python-pylint-executable nil)
  '(global-font-lock-mode t nil (font-lock))
  '(ido-mode (quote both) nil (ido))
  '(initial-scratch-message "*Nebhrajani A.'s scratch buffer. You shouldn't be here.*
@@ -838,6 +874,7 @@
    (quote
     ("~/agenda/bt.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
  '(org-babel-load-languages (quote ((C . t) (python . t) (emacs-lisp . t))))
+ '(org-babel-python-command "python3")
  '(org-confirm-babel-evaluate nil)
  '(org-ellipsis "⤵")
  '(org-export-latex-packages-alist
@@ -873,19 +910,20 @@
  '(org-latex-packages-alist
    (quote
     (("" "minted" nil)
-     ("a4paper, total={6in, 9.1in}" "geometry" nil))))
+     ("a4paper, total={6in, 9in}" "geometry" nil))))
  '(org-modules
    (quote
     (ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus org-habit org-habit-plus ol-info ol-irc ol-mhe ol-rmail ol-w3m)))
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
  '(powerline-height nil)
  '(printer-name "sjc06-02-c612-c")
  '(ps-lpr-command "lp")
+ '(python-shell-interpreter "python3")
  '(rustic-ansi-faces
    ["#002b36" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#839496"])
  '(safe-local-variable-values (quote ((emacs-lisp-docstring-fill-column . 75))))
@@ -905,6 +943,7 @@
  '(spaceline-show-default-input-method t)
  '(split-width-threshold nil)
  '(transient-mark-mode t)
+ '(undo-tree-auto-save-history nil)
  '(vc-annotate-background "#002b36")
  '(vc-annotate-color-map
    (list
@@ -930,3 +969,6 @@
 
 (use-package evil-mc
   :load-path "~/.emacs.d/elpa/evil-mc-20200228.1535/")
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
