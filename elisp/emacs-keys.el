@@ -9,30 +9,30 @@
 ; Created : September 19, 1995.
 ; By      : Vijay A. Nebhrajani, HDEG, CDAC, Pune, 411 007, INDIA.
 ;
-; Documentation : These are the global key bindings that will be used 
+; Documentation : These are the global key bindings that will be used
 ;                 by Emacs 19.19.
 ;
 ; In case of problems : Get to Vijay A. Nebhrajani, Hardware Developmemt and
 ;                       Engineering Group, Centre for Development of Advanced
 ;                       Computing, Pune University Campus, Ganeshkhind, Pune
 ;                       411018, INDIA. Ph: (0212)352531/352461/352479/352483.
-;                       E-mail: vijayn@parcom.ernet.in 
+;                       E-mail: vijayn@parcom.ernet.in
 ;
 ;###################################################################################
 
 
-(global-set-key (quote [f1])     (quote find-file))                     
-(global-set-key (quote [S-f1])   (quote find-file-other-window))        
-(global-set-key (quote [C-f1])   (quote find-file-other-frame))         
-(global-set-key (quote [f2])     (quote copy-to-register))              
-(global-set-key (quote [S-f2])   (quote insert-register))               
-(global-set-key (quote [C-f2])   (quote view-register))                 
-(global-set-key (quote [f3])     (quote kill-region))                   
-(global-set-key (quote [S-f3])   (quote kill-rectangle))                
-(global-set-key (quote [C-f3])   (quote kill-line))                     
-(global-set-key (quote [f4])     (quote shell))                         
-(global-set-key (quote [S-f4])   (quote shell-command))                 
-(global-set-key (quote [C-f4])   (quote shell))                         
+(global-set-key (quote [f1])     (quote find-file))
+(global-set-key (quote [S-f1])   (quote find-file-other-window))
+(global-set-key (quote [C-f1])   (quote find-file-other-frame))
+(global-set-key (quote [f2])     (quote copy-to-register))
+(global-set-key (quote [S-f2])   (quote insert-register))
+(global-set-key (quote [C-f2])   (quote view-register))
+(global-set-key (quote [f3])     (quote kill-region))
+(global-set-key (quote [S-f3])   (quote kill-rectangle))
+(global-set-key (quote [C-f3])   (quote kill-line))
+(global-set-key (quote [f4])     (quote shell))
+(global-set-key (quote [S-f4])   (quote shell-command))
+(global-set-key (quote [C-f4])   (quote shell))
 (global-set-key (quote [f5])     (quote call-last-kbd-macro))
 (global-set-key (quote [S-f5])   (quote start-kbd-macro))
 (global-set-key (quote [C-f5])   (quote end-kbd-macro))

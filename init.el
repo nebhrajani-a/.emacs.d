@@ -25,6 +25,9 @@
 (define-key global-map "\C-l" 'redraw-display)
 (define-key global-map "\C-x\C-a" 'replace-string)
 (global-set-key (kbd "M-o") 'other-window)
+(global-set-key (quote [XF86AudioPrev])     (quote spotify-previous))
+(global-set-key (quote [XF86AudioNext])     (quote spotify-next))
+(global-set-key (quote [XF86AudioPlay])     (quote spotify-playpause))
 
 ;; (define-prefix-command 'space-map)
 ;; (global-set-key (kbd "SPC") 'space-map)
@@ -868,11 +871,12 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(jdee-db-active-breakpoint-face-colors (cons "#073642" "#268bd2"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#073642" "#859900"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#073642" "#56697A"))
+ '(keyboard-coding-system (quote utf-8-unix))
  '(lpr-command "lp")
  '(objed-cursor-color "#dc322f")
  '(org-agenda-files
    (quote
-    ("~/agenda/bt.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
+    ("~/agenda/jee.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
  '(org-babel-load-languages (quote ((C . t) (python . t) (emacs-lisp . t))))
  '(org-babel-python-command "python3")
  '(org-confirm-babel-evaluate nil)
@@ -882,6 +886,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
     (("a4paper, total={6in, 9in}" "geometry" nil)
      ("" "amsmath" nil)
      ("" "tabulary" nil))))
+ '(org-latex-default-class "article")
  '(org-latex-default-packages-alist
    (quote
     (("AUTO" "inputenc" t
