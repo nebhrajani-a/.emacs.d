@@ -49,7 +49,7 @@
 (global-set-key (quote [S-f9])   (quote switch-to-buffer))
 (global-set-key (quote [C-f9])   (quote insert-buffer))
 (global-set-key (quote [f10])    (quote string-rectangle))
-(global-set-key (quote [f11])    (quote hilit-silent))
+(global-set-key (quote [f11])    (quote toggle-frame-fullscreen))
 (global-set-key (quote [f14])    (quote undo))
 (global-set-key (quote [f18])    (quote yank))
 (global-set-key (quote [f19])    (quote isearch-forward))
