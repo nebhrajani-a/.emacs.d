@@ -520,6 +520,7 @@
                evil-emacs-state-map))
 (define-key (eval map) "\C-y" nil))
 
+(define-key evil-normal-state-map "J" nil)
 ;; Emojify setup
 ;; (use-package emojify
 ;;   :config (if (display-graphic-p)
@@ -695,7 +696,6 @@
     ))
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince")))
 
-
 ;; ────────────────────────── Some Org setup ──────────────────────────
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
@@ -828,8 +828,26 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 (elcord-mode)
 
 
+;; ────────────────── Highlighted Guides for Python ─────────────────
 (load-file "~/.emacs.d/elisp/highlight-indent-guides.el")
 (add-hook 'elpy-mode-hook 'highlight-indent-guides-mode)
+(defun highlight-indent-guides-auto-set-faces-with-frame (frame)
+  (with-selected-frame frame
+    (highlight-indent-guides-auto-set-faces)))
+(if (daemonp)
+    (add-hook 'after-make-frame-functions #'highlight-indent-guides-auto-set-faces-with-frame))
+
+;; ────────────────── Bindings for Block Navigation ─────────────────
+;; Uncomment when package maintainer fixes recursion depth issue, and
+;; edits are made to ~/.emacs.d/elisp/block-nav.el.
+
+;; Maybe this is better done with foward-sexp anyway
+
+;; (load-file "~/.emacs.d/elisp/block-nav.el")
+;; (define-key evil-motion-state-map "H" 'block-nav-previous-indentation-level)
+;; (define-key evil-motion-state-map "J" 'block-nav-next-block)
+;; (define-key evil-motion-state-map "K" 'block-nav-previous-block)
+;; (define-key evil-motion-state-map "L" 'block-nav-next-indentation-level)
 
 
 ;; ───────────────────────── Custom set stuff ─────────────────────────
@@ -886,6 +904,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(highlight-indent-guides-auto-character-face-perc 10)
  '(highlight-indent-guides-auto-enabled t)
  '(highlight-indent-guides-method (quote character))
+ '(highlight-indent-guides-responsive (quote top))
  '(highlight-indentation-blank-lines nil)
  '(ido-auto-merge-delay-time 1.5)
  '(ido-mode (quote both) nil (ido))
@@ -946,7 +965,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gnu-elpa-keyring-update gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
  '(powerline-height nil)
