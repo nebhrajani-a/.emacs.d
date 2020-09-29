@@ -768,9 +768,17 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 ;; ──── Enables source code block background darkening in org-mode ────
 (require 'color)
-(set-face-attribute 'org-block nil :background
-                    (color-darken-name
-                     (face-attribute 'default :background) 2))
+(defun darken ()
+  "Darkens background in org-source blocks."
+  (set-face-attribute 'org-block nil :background
+                      (color-darken-name
+                       (face-attribute 'default :background) 2)))
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+              (lambda (frame)
+                (with-selected-frame frame (darken))))
+  (darken))
+
 
 ;; ───────────────────── Org-mode prettification ────────────────────
 (add-hook 'org-mode-hook (lambda ()
