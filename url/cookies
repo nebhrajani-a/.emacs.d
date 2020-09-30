@@ -2,47 +2,44 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".youtube.com"
-  [url-cookie "httponly" nil "01-Feb-2021 06:31:15.00 GMT" "/" ".youtube.com" nil]
-  [url-cookie "samesite" "None" "01-Feb-2021 06:31:15.00 GMT" "/" ".youtube.com" nil]
-  [url-cookie "VISITOR_INFO1_LIVE" "OMwcXNaBrCA" "01-Feb-2021 06:31:15.00 GMT" "/" ".youtube.com" nil])
- (".google.com"
-  [url-cookie "NID" "204=G-fr5z4jLKCr5CwkNilKM_qx-svCNflyhFmNpbPz_HaiI_vfzidICuQz8un8ev6DIMD2IaJ_t_DpdpQIqDVkMicvHhUhQRbel9J1vLRLrIvCKeWV64JCmByzS4NFMQtUZSKZvnycoIsonvecVMu3i-9QMEJ3kzZM0mMxDfKoqL0" "04-Feb-2021 06:28:31.00 GMT" "/" ".google.com" nil]
-  [url-cookie "CGIC" "IgMqLyo" "01-Feb-2021 06:28:44.00 GMT" "/complete/search" ".google.com" nil]
-  [url-cookie "HttpOnly" nil "01-Feb-2021 06:28:44.00 GMT" "/complete/search" ".google.com" nil]
+ '((".google.com"
+  [url-cookie "HttpOnly" nil "01-Feb-2021 06:28:44.00 GMT" "/search" ".google.com" nil]
   [url-cookie "CGIC" "IgMqLyo" "01-Feb-2021 06:28:44.00 GMT" "/search" ".google.com" nil]
-  [url-cookie "HttpOnly" nil "01-Feb-2021 06:28:44.00 GMT" "/search" ".google.com" nil]))
+  [url-cookie "HttpOnly" nil "01-Feb-2021 06:28:44.00 GMT" "/complete/search" ".google.com" nil]
+  [url-cookie "CGIC" "IgMqLyo" "01-Feb-2021 06:28:44.00 GMT" "/complete/search" ".google.com" nil]
+  [url-cookie "NID" "204=G-fr5z4jLKCr5CwkNilKM_qx-svCNflyhFmNpbPz_HaiI_vfzidICuQz8un8ev6DIMD2IaJ_t_DpdpQIqDVkMicvHhUhQRbel9J1vLRLrIvCKeWV64JCmByzS4NFMQtUZSKZvnycoIsonvecVMu3i-9QMEJ3kzZM0mMxDfKoqL0" "04-Feb-2021 06:28:31.00 GMT" "/" ".google.com" nil])
+ (".youtube.com"
+  [url-cookie "VISITOR_INFO1_LIVE" "OMwcXNaBrCA" "01-Feb-2021 06:31:15.00 GMT" "/" ".youtube.com" nil]
+  [url-cookie "samesite" "None" "01-Feb-2021 06:31:15.00 GMT" "/" ".youtube.com" nil]
+  [url-cookie "httponly" nil "01-Feb-2021 06:31:15.00 GMT" "/" ".youtube.com" nil]))
 )
 (setq url-cookie-secure-storage
- '((".instagram.com"
-  [url-cookie "ig_did" "AD068D63-401B-42F1-810D-DF46B9678005" "03-Aug-2030 06:28:49.00 GMT" "/" ".instagram.com" t]
-  [url-cookie "Max-Age" "315360000" "03-Aug-2030 06:28:49.00 GMT" "/" ".instagram.com" t]
-  [url-cookie "csrftoken" "FMWNeqKAu8c2wi3cqPTm2LfdWOLI9ubS" "04-Aug-2021 06:28:49.00 GMT" "/" ".instagram.com" t]
-  [url-cookie "mid" "XypRoQAEAAGHO5BW62O7ehh5_-aP" "03-Aug-2030 06:28:49.00 GMT" "/" ".instagram.com" t])
- (".twitter.com"
-  [url-cookie "personalization_id" "v1_7rUSClnCNop/ev3AkkmcKg==" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t]
-  [url-cookie "Max-Age" "63072000" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t]
-  [url-cookie "SameSite" "None" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t]
-  [url-cookie "guest_id" "v1%3A159660894804232710" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t])
- ("github.com"
-  [url-cookie "_octo" "GH1.1.2101744475.1596608984" "Thu, 05 Aug 2021 06:29:44 GMT" "/" "github.com" t]
-  [url-cookie "logged_in" "no" "Thu, 05 Aug 2021 06:29:44 GMT" "/" "github.com" t]
-  [url-cookie "_device_id" "ac360c8c2d33c43f4c86765d9f41788e" "Thu, 05 Aug 2021 06:30:34 GMT" "/" "github.com" t]
-  [url-cookie "has_recent_activity" "1" "Wed, 05 Aug 2020 07:30:34 GMT" "/" "github.com" t]
-  [url-cookie "user_session" "OwCLBv2D7FdJLLwztiOihqzIlaNcKBiHVvt_PuiZsowVikEh" "Wed, 19 Aug 2020 06:30:34 GMT" "/" "github.com" t]
-  [url-cookie "__Host-user_session_same_site" "OwCLBv2D7FdJLLwztiOihqzIlaNcKBiHVvt_PuiZsowVikEh" "Wed, 19 Aug 2020 06:30:34 GMT" "/" "github.com" t])
- (".github.com"
-  [url-cookie "logged_in" "yes" "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t]
-  [url-cookie "HttpOnly" nil "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t]
-  [url-cookie "SameSite" "Lax" "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t]
-  [url-cookie "dotcom_user" "nebhrajani-a" "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t])
+ '((".google.com"
+  [url-cookie "1P_JAR" "2020-09-28-13" "28-Oct-2020 13:50:47.00 GMT" "/" ".google.com" t])
  ("accounts.google.com"
-  [url-cookie "GAPS" "1:LkPI7Q7qRqVcmAqo4mXKhm9uCFjtLw:X0k8mOCry4MEkOb2" "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t]
-  [url-cookie "HttpOnly" nil "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t]
+  [url-cookie "__Host-GAPS" "1:LkPI7Q7qRqVcmAqo4mXKhm9uCFjtLw:X0k8mOCry4MEkOb2" "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t]
   [url-cookie "Priority" "HIGH" "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t]
-  [url-cookie "__Host-GAPS" "1:LkPI7Q7qRqVcmAqo4mXKhm9uCFjtLw:X0k8mOCry4MEkOb2" "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t])
- (".google.com"
-  [url-cookie "1P_JAR" "2020-08-05-06" "04-Sep-2020 06:31:06.00 GMT" "/" ".google.com" t]))
+  [url-cookie "HttpOnly" nil "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t]
+  [url-cookie "GAPS" "1:LkPI7Q7qRqVcmAqo4mXKhm9uCFjtLw:X0k8mOCry4MEkOb2" "05-Aug-2022 06:31:54.00 GMT" "/" "accounts.google.com" t])
+ (".github.com"
+  [url-cookie "dotcom_user" "nebhrajani-a" "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t]
+  [url-cookie "SameSite" "Lax" "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t]
+  [url-cookie "HttpOnly" nil "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t]
+  [url-cookie "logged_in" "yes" "Thu, 05 Aug 2021 06:30:34 GMT" "/" ".github.com" t])
+ ("github.com"
+  [url-cookie "_device_id" "ac360c8c2d33c43f4c86765d9f41788e" "Thu, 05 Aug 2021 06:30:34 GMT" "/" "github.com" t]
+  [url-cookie "logged_in" "no" "Thu, 05 Aug 2021 06:29:44 GMT" "/" "github.com" t]
+  [url-cookie "_octo" "GH1.1.2101744475.1596608984" "Thu, 05 Aug 2021 06:29:44 GMT" "/" "github.com" t])
+ (".twitter.com"
+  [url-cookie "guest_id" "v1%3A159660894804232710" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t]
+  [url-cookie "SameSite" "None" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t]
+  [url-cookie "Max-Age" "63072000" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t]
+  [url-cookie "personalization_id" "v1_7rUSClnCNop/ev3AkkmcKg==" "Fri, 5 Aug 2022 06:29:08 GMT" "/" ".twitter.com" t])
+ (".instagram.com"
+  [url-cookie "mid" "XypRoQAEAAGHO5BW62O7ehh5_-aP" "03-Aug-2030 06:28:49.00 GMT" "/" ".instagram.com" t]
+  [url-cookie "csrftoken" "FMWNeqKAu8c2wi3cqPTm2LfdWOLI9ubS" "27-Sep-2021 13:51:15.00 GMT" "/" ".instagram.com" t]
+  [url-cookie "Max-Age" "31449600" "27-Sep-2021 13:51:15.00 GMT" "/" ".instagram.com" t]
+  [url-cookie "ig_did" "AD068D63-401B-42F1-810D-DF46B9678005" "03-Aug-2030 06:28:49.00 GMT" "/" ".instagram.com" t]))
 )
 
 ;; Local Variables:

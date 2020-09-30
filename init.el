@@ -276,6 +276,7 @@
 
 ;; Smartparens Mode
 (smartparens-global-mode 1)
+(show-smartparens-global-mode 1)
 
 
 ;; ────────────────────── Recent files with ido ─────────────────────
@@ -849,7 +850,8 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; Uncomment when package maintainer fixes recursion depth issue, and
 ;; edits are made to ~/.emacs.d/elisp/block-nav.el.
 
-;; Maybe this is better done with foward-sexp anyway
+;; Maybe this is better done with forward-sexp anyway, and ELPY binds
+;; C-down, C-up to the equivalent functions anyway.
 
 ;; (load-file "~/.emacs.d/elisp/block-nav.el")
 ;; (define-key evil-motion-state-map "H" 'block-nav-previous-indentation-level)
