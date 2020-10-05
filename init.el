@@ -929,7 +929,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(objed-cursor-color "#dc322f")
  '(org-agenda-files
    (quote
-    ("~/agenda/jee.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
+    ("~/agenda/last_three_months.org" "~/agenda/jee.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
  '(org-babel-load-languages (quote ((C . t) (python . t) (emacs-lisp . t))))
  '(org-babel-python-command "python3")
  '(org-confirm-babel-evaluate nil)
