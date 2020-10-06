@@ -29,6 +29,12 @@
 (global-set-key (quote [XF86AudioNext])     (quote spotify-next))
 (global-set-key (quote [XF86AudioPlay])     (quote spotify-playpause))
 
+
+(defun indent-buffer ()
+  "Indent current buffer according to major mode."
+  (interactive)
+  (indent-region (point-min) (point-max)))
+(define-key global-map (kbd "C-<tab>") 'indent-buffer)
 ;; (define-prefix-command 'space-map)
 ;; (global-set-key (kbd "SPC") 'space-map)
 ;; (define-key space-map (kbd "x") 'smex)
@@ -254,11 +260,11 @@
 
 ;; Markdown mode
 (autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
+  "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (autoload 'gfm-mode "markdown-mode"
-   "Major mode for editing GitHub Flavored Markdown files" t)
+  "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
 ;; Render and export keybindings in markdown mode
@@ -350,7 +356,7 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-(load-file "~/.emacs.d/elpa/company-20200525.101/company.el")
+(load-file "~/.emacs.d/elpa/company-20200927.2222/company.el")
 (defun company-to-yasnippet ()
   (interactive)
   (company-abort)
@@ -519,7 +525,7 @@
 (dolist (map '(evil-motion-state-map
                evil-insert-state-map
                evil-emacs-state-map))
-(define-key (eval map) "\C-y" nil))
+  (define-key (eval map) "\C-y" nil))
 
 (define-key evil-normal-state-map "J" nil)
 ;; Emojify setup
@@ -530,11 +536,11 @@
 ;;             )
 ;;   (setq emojify-emoji-set "emojione-v2.2.6")
 ;;   :init (global-emojify-mode 1))
-(use-package emojify
-  :commands emojify-mode
-  :hook ((after-init . global-emojify-mode))
-  :init (setq emojify-emoji-styles '(unicode github ascii)
-               emojify-display-style 'image))
+;; (use-package emojify
+;;   :commands emojify-mode
+;;   :hook ((after-init . global-emojify-mode))
+;;   :init (setq emojify-emoji-styles '(unicode github ascii)
+;;               emojify-display-style 'image))
 (use-package all-the-icons
   :init (setq inhibit-compacting-font-caches t))
 
@@ -547,8 +553,8 @@
 ;; Markdown, because it uses two trailing blanks as a signal to create
 ;; a line break.
 (add-hook 'before-save-hook '(lambda()
-                              (when (not (or (derived-mode-p 'markdown-mode)))
-                                (delete-trailing-whitespace))))
+                               (when (not (or (derived-mode-p 'markdown-mode)))
+                                 (delete-trailing-whitespace))))
 
 ;; Code Folding
 ;; Enable code folding for programming modes.
@@ -655,8 +661,6 @@
 ;; (setq spotify-oauth2-client-id "61d487409dce4aabade754d11409ed46")
 ;; (define-key spotify-mode-map (kbd "C-c .") 'spotify-command-map)
 
-;; ───────────────────────────── Emoji ────────────────────────────
-(require 'company-emoji)
 
 (use-package treemacs
   :bind
@@ -783,11 +787,11 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 ;; ───────────────────── Org-mode prettification ────────────────────
 (add-hook 'org-mode-hook (lambda ()
-   "Beautify Org Checkbox Symbol"
-   (push '("[ ]" .  "☐") prettify-symbols-alist)
-   (push '("[X]" . "✓" ) prettify-symbols-alist)
-   (push '("[-]" . "○" ) prettify-symbols-alist)
-   (prettify-symbols-mode)))
+                           "Beautify Org Checkbox Symbol"
+                           (push '("[ ]" .  "☐") prettify-symbols-alist)
+                           (push '("[X]" . "✓" ) prettify-symbols-alist)
+                           (push '("[-]" . "○" ) prettify-symbols-alist)
+                           (prettify-symbols-mode)))
 
 (defface org-checkbox-done-text
   '((t (:foreground "#71696A" :strike-through t)))
@@ -800,9 +804,9 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  'append)
 
 (add-hook 'treemacs-mode-hook (lambda ()
-    (setq buffer-face-mode-face `(:background "#232830"))
-    (linum-relative-off)
-    (buffer-face-mode 1)))
+                                (setq buffer-face-mode-face `(:background "#232830"))
+                                (linum-relative-off)
+                                (buffer-face-mode 1)))
 
 ;; ─────────────────────────── Ediff setup ──────────────────────────
 (setq ediff-split-window-function 'split-window-horizontally)
@@ -859,6 +863,30 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; (define-key evil-motion-state-map "K" 'block-nav-previous-block)
 ;; (define-key evil-motion-state-map "L" 'block-nav-next-indentation-level)
 
+;; ──────────── Move text around using M-<UP> and M-<DOWN> ────────────
+(use-package move-text)
+(move-text-default-bindings)
+
+;; ────────────────── Use swiper instead of isearch ─────────────────
+(use-package swiper
+  :bind (("C-s" . swiper)))
+
+;; ──────────────────────────── Rust Setup ────────────────────────────
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
+(add-hook 'rust-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-<tab>") #'rust-format-buffer)))
+(setq racer-cmd "~/.cargo/bin/racer") ;; Rustup binaries PATH
+(setq racer-rust-src-path
+      (concat (string-trim
+               (shell-command-to-string "rustc --print sysroot"))
+              "/lib/rustlib/src/rust/src"))
+
+(require 'rust-mode)
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'company-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
@@ -880,7 +908,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(company-backends
    (quote
     ((company-keywords)
-     company-elisp company-emoji company-yasnippet company-nxml company-dabbrev company-css company-eclim company-semantic company-bbdb company-xcode company-cmake company-capf company-files
+     company-capf company-emoji company-yasnippet company-nxml company-dabbrev company-css company-eclim company-semantic company-bbdb company-xcode company-cmake company-capf company-files
      (company-dabbrev-code company-gtags company-etags)
      company-oddmuse company-dabbrev-code)))
  '(company-frontends
@@ -976,7 +1004,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji company howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
  '(powerline-height nil)
@@ -1001,6 +1029,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(smooth-scrolling-mode t)
  '(spaceline-show-default-input-method t)
  '(split-width-threshold nil)
+ '(swiper-verbose t)
  '(transient-mark-mode t)
  '(undo-tree-auto-save-history nil)
  '(vc-annotate-background "#002b36")

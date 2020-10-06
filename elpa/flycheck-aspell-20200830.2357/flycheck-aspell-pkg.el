@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "flycheck-aspell" "20200830.2357" "Aspell checker for flycheck" '((flycheck "28.0") (emacs "25.1")) :commit "da8c3748228b9c08b518686117163f5da5ea7eb6" :keywords '("wp" "flycheck" "spell" "aspell") :authors '(("Leo Gaskin" . "leo.gaskin@brg-feldkirchen.at")) :maintainer '("Leo Gaskin" . "leo.gaskin@brg-feldkirchen.at") :url "https://github.com/leotaku/flycheck-aspell")
