@@ -893,6 +893,11 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; and linum-relative mode. (Reproducible). Emacs 26.1+, use
 ;; display-line-numbers-mode instead, that should not break things.
                                         ;TODO: Test display-line-numbers-mode in 26+.
+;; Tested on Emacs 27.1, issue does not occur with both linum-mode and
+;; display-line-numbers-mode. Seems to be an issue with newer versions
+;; of company with older versions of linum included with Emacs 25.2-.
+;; Update Emacs...
+
 
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
