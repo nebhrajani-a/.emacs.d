@@ -246,9 +246,6 @@
 (use-package shell-pop
   :bind (("C-S-t" . shell-pop)))
 
-;; Globally use line number (linum) mode
-(global-linum-mode 1)
-
 ;; Zoning
 (require 'zone)
 (zone-when-idle 120)
@@ -356,13 +353,13 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-(load-file "~/.emacs.d/elpa/company-20200927.2222/company.el")
-(defun company-to-yasnippet ()
-  (interactive)
-  (company-abort)
-  (call-interactively 'company-yasnippet))
-(bind-key "<backtab>" 'company-to-yasnippet company-active-map)
-(bind-key "<backtab>" 'company-yasnippet)
+;; (load-file "~/.emacs.d/elpa/company-20200927.2222/company.el")
+;; (defun company-to-yasnippet ()
+;;   (interactive)
+;;   (company-abort)
+;;   (call-interactively 'company-yasnippet))
+;; (bind-key "<backtab>" 'company-to-yasnippet company-active-map)
+;; (bind-key "<backtab>" 'company-yasnippet)
 
 ;; Highlight the current line globally.
 (global-hl-line-mode)
@@ -715,12 +712,6 @@
 
 (load-file "~/.emacs.d/elisp/org-habit-plus.el")
 
-;; Better evil keybindings in various modes
-
-(require 'linum-relative)
-(add-hook 'prog-mode-hook 'linum-relative-mode)
-(add-hook 'text-mode-hook 'linum-relative-mode)
-
 ;; ───────────────────────── Evil-easymotion ────────────────────────
 (evilem-default-keybindings ",")
 
@@ -821,7 +812,6 @@ This is the same as using \\[set-mark-command] with the prefix argument."
           (lambda ()
             (setq flycheck-python-pylint-executable "python3")))
 
-
 ;; ─────────────────────── Unbind q from macros ───────────────────────
 (define-key evil-normal-state-map (kbd "q") nil)
 
@@ -899,7 +889,10 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; There is a major issue in Emacs-Lisp mode where the company tooltip
 ;; does not appear and instead 'crunches' the lines under it. Not sure
 ;; how to fix this issue.
-;TODO: Fix.
+;; Issue root tracked: line numbering. Issue is caused by linum-mode
+;; and linum-relative mode. (Reproducible). Emacs 26.1+, use
+;; display-line-numbers-mode instead, that should not break things.
+                                        ;TODO: Test display-line-numbers-mode in 26+.
 
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
@@ -921,12 +914,12 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(company-backends
    (quote
     ((company-keywords)
-     company-elisp company-emoji company-yasnippet company-nxml company-dabbrev company-css company-eclim company-semantic company-bbdb company-xcode company-cmake company-capf company-files
+     company-elisp company-capf company-yasnippet company-nxml company-dabbrev company-css company-eclim company-semantic company-bbdb company-cmake company-capf company-files
      (company-dabbrev-code company-gtags company-etags)
      company-oddmuse company-dabbrev-code)))
  '(company-frontends
    (quote
-    (company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend)))
+    (company-preview-frontend company-echo-metadata-frontend)))
  '(company-show-numbers (quote (quote t)))
  '(company-tabnine-wait 0.1)
  '(completion-styles (quote (basic partial-completion emacs22)))
@@ -1017,7 +1010,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (company-box ag smart-jump flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion linum-relative floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (company-box ag smart-jump flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion floobits common-lisp-snippets caps-lock cdlatex smtpmail-multi bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
  '(powerline-height nil)
