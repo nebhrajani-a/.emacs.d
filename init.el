@@ -55,7 +55,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; VHDL Mode setup.
-
 (defun prepend-path ( my-path )
   (setq load-path (cons (expand-file-name my-path) load-path)))
 
@@ -715,7 +714,7 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(load-file "~/.emacs.d/elisp/org-habit-plus.el")
+;; (load-file "~/.emacs.d/elisp/org-habit-plus.el")
 
 ;; ───────────────────────── Evil-easymotion ────────────────────────
 (evilem-default-keybindings ",")
