@@ -817,7 +817,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
             (setq flycheck-python-pylint-executable "python3")))
 
 ;; ─────────────────────── Unbind q from macros ───────────────────────
-(define-key evil-normal-state-map (kbd "q") nil)
+(define-key evil-normal-state-map (kbd "q") 'kill-current-buffer)
 
 ;; ──────────── Key-sequences setup (Key-Chord Dependency) ────────────
 (load-file "~/.emacs.d/elisp/key-chord.el")
@@ -825,6 +825,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 (key-chord-mode 1)
 (key-seq-define-global "qs" 'save-buffer)
+;; (key-seq-define-global (kbd "qs") (kbd "C-x C-s"))
 
 ;; ────────── Use qw to escape from anything and everything ─────────
 (evil-escape-mode 1)
