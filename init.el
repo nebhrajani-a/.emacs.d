@@ -800,7 +800,6 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 (add-hook 'treemacs-mode-hook (lambda ()
                                 (setq buffer-face-mode-face `(:background "#232830"))
-                                (linum-relative-off)
                                 (buffer-face-mode 1)))
 
 ;; ─────────────────────────── Ediff setup ──────────────────────────
