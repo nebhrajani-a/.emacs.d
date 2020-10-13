@@ -826,7 +826,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 (key-chord-mode 1)
 (key-seq-define-global "km" 'save-buffer)
-;; (key-seq-define-global (kbd "qs") (kbd "C-x C-s"))
+;; (key-seq-define-global (kbd "km") (kbd "C-x C-s"))
 
 ;; ────────── Use qw to escape from anything and everything ─────────
 (evil-escape-mode 1)
@@ -835,7 +835,6 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; ──────────────────── Emacs Stuff for Discord ────────────────────
 (require 'elcord)
 (elcord-mode)
-
 
 ;; ────────────────── Highlighted Guides for Python ─────────────────
 (load-file "~/.emacs.d/elisp/highlight-indent-guides.el")
