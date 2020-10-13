@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "evil-magit" "evil-magit.el" (24350 44705 936134
-;;;;;;  374000))
+;;;### (autoloads nil "evil-magit" "evil-magit.el" (24453 52734 586756
+;;;;;;  907000))
 ;;; Generated autoloads from evil-magit.el
 
 (autoload 'evil-magit-init "evil-magit" "\
