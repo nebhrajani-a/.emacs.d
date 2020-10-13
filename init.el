@@ -818,18 +818,19 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 ;; ─────────────────────── Unbind q from macros ───────────────────────
 (define-key evil-normal-state-map (kbd "q") 'kill-current-buffer)
+(define-key evil-normal-state-map (kbd "m") nil)
 
 ;; ──────────── Key-sequences setup (Key-Chord Dependency) ────────────
 (load-file "~/.emacs.d/elisp/key-chord.el")
 (load-file "~/.emacs.d/elisp/key-seq.el")
 
 (key-chord-mode 1)
-(key-seq-define-global "qs" 'save-buffer)
+(key-seq-define-global "km" 'save-buffer)
 ;; (key-seq-define-global (kbd "qs") (kbd "C-x C-s"))
 
 ;; ────────── Use qw to escape from anything and everything ─────────
 (evil-escape-mode 1)
-(setq-default evil-escape-key-sequence "qw")
+(setq-default evil-escape-key-sequence "kj")
 
 ;; ──────────────────── Emacs Stuff for Discord ────────────────────
 (require 'elcord)
@@ -864,7 +865,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 ;; ────────────────── Use swiper instead of isearch ─────────────────
 (use-package swiper
-  :bind (("C-s" . swiper)))
+  :bind (("C-s" . swiper-isearch)))
 
 ;; ──────────────────────────── Rust Setup ────────────────────────────
 (add-hook 'rust-mode-hook 'cargo-minor-mode)
