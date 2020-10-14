@@ -7,7 +7,7 @@ to prevent dependency hell and TLS key issues. As long as you're using
 Emacs 25+, you should be okay.
 
 ```
-$ mv .emacs.d .emacs.d.bak
+$ :warning: mv .emacs.d .emacs.d.bak
 $ git clone https://github.com/nebhrajani-a/.emacs.d
 ```
 
