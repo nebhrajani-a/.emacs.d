@@ -925,6 +925,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(blink-cursor-interval 0.6)
  '(c-basic-offset 2)
  '(case-fold-search t)
+ '(comint-scroll-show-maximum-output t)
  '(company-backends
    (quote
     ((company-keywords)
@@ -1034,6 +1035,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(rustic-ansi-faces
    ["#002b36" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#839496"])
  '(safe-local-variable-values (quote ((emacs-lisp-docstring-fill-column . 75))))
+ '(send-mail-function (quote smtpmail-send-it))
  '(shell-pop-shell-type
    (quote
     ("terminal" "*terminal*"
