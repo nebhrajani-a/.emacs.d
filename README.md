@@ -12,8 +12,8 @@ $ mv .emacs.d .emacs.d.bak
 $ git clone https://github.com/nebhrajani-a/.emacs.d
 ```
 
-
 ## TODO
 - Rewrite `init.el` in literate programming style with `org-mode`.
 - Test on Windows.
 - Add LSP support for most major modes.
+
