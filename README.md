@@ -1,5 +1,6 @@
 # My .emacs.d configuration
-A clone of my Emacs configuration, set up for Linux. Uses `evil`.
+A clone of my Emacs configuration. It works as expected on most *nix
+systems, including macOS. Uses `evil`.
 Primarily for backup and redundancy purposes. 
 
 > :warning: Unlike typical configurations: this one literally has

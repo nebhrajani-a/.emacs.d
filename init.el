@@ -229,6 +229,7 @@
 ;;   (apply-theme))
 
 (load-theme 'atom-one-dark t)
+
 (if (daemonp)
     (add-hook 'after-make-frame-functions
               (lambda (frame)
