@@ -228,7 +228,9 @@
 ;;                 (with-selected-frame frame (apply-theme))))
 ;;   (apply-theme))
 
+;; (if (display-graphic-p)
 (load-theme 'atom-one-dark t)
+;; (load-theme 'spacemacs-dark t))
 
 (if (daemonp)
     (add-hook 'after-make-frame-functions
