@@ -505,7 +505,7 @@
 ;; Multiple cursors in evil-mode
 (global-evil-mc-mode  1)
 
-;; Evil-mode: Make movement keys work like they should
+;; Evil-mode: Make movement keys work like they should for visual lines
 (define-key evil-normal-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
 (define-key evil-motion-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
