@@ -17,7 +17,7 @@ $ git clone https://github.com/nebhrajani-a/.emacs.d
 
 ** Basic Keybindings
 
-| Key   | Function                      |
+| *Key* | *Function*                    |
 | SPC f | find-file                     |
 | SPC b | switch-to-buffer              |
 | SPC k | kill-current-buffer           |
