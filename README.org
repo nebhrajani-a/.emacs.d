@@ -36,7 +36,6 @@ $ git clone https://github.com/nebhrajani-a/.emacs.d
 | SPC c | delete-frame                  |
 | SPC a | org-agenda-list)              |
 
-
 ** TODO
 - Rewrite =init.el= in literate programming style with =org-mode=.
 - Test on Windows.
