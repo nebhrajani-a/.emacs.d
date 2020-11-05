@@ -908,6 +908,9 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
+;; ───────────────────── Fix $PAGER issue in term ─────────────────────
+(setenv "PAGER" "cat")
+
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
