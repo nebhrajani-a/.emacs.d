@@ -1,5 +1,5 @@
 ;; Setup
-(setq user-full-name "Aditya V. Nebhrajani"
+(setq user-full-name "Nebhrajani A.V."
       user-mail-address "aditya.v.nebhrajani@gmail.com"
       calendar-latitude 18.5
       calendar-longitude -73.8
@@ -316,7 +316,7 @@
   "3" 'split-window-right-and-switch
   "0" 'delete-window
   "z" 'suspend-frame
-  "d" 'treemacs
+  "d" 'dired
   "o" 'other-window
   "r" 'ido-recentf-open
   "g" 'magit
