@@ -902,7 +902,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; Tested on Emacs 27.1, issue does not occur with both linum-mode and
 ;; display-line-numbers-mode. Seems to be an issue with newer versions
 ;; of company with older versions of linum included with Emacs 25.2-.
-;; Update Emacs...
+;; Update Emacs.
 
 ;; ──────────────────────── JavaScript Support ────────────────────────
 (require 'js2-mode)
