@@ -31,10 +31,12 @@ $ git clone https://github.com/nebhrajani-a/.emacs.d
 | SPC o | other-window                  |
 | SPC r | ido-recentf-open              |
 | SPC g | magit                         |
-| SPC s | save-buffer                   |
+| SPC s | swiper-isearch                |
 | SPC t | shell-pop                     |
 | SPC c | delete-frame                  |
 | SPC a | org-agenda-list)              |
+| SPC - | text-scale-decrease           |
+| SPC = | text-scale-increase           |
 
 ** TODO
 - Rewrite =init.el= in literate programming style with =org-mode=.
