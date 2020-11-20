@@ -320,10 +320,12 @@
   "o" 'other-window
   "r" 'ido-recentf-open
   "g" 'magit
-  "s" 'save-buffer
+  "s" 'swiper-isearch
   "t" 'shell-pop
   "c" 'delete-frame
-  "a" 'org-agenda-list)
+  "a" 'org-agenda-list
+  "-" 'text-scale-decrease
+  "=" 'text-scale-increase)
 
 ;; Evil mode setup
 (require 'evil)
