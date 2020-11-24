@@ -301,7 +301,6 @@
       (message "Opening file...")
     (message "Aborting")))
 
-
 ;; ─────────────────────────── Evil-leader ──────────────────────────
 (require 'evil-leader)
 (global-evil-leader-mode)
