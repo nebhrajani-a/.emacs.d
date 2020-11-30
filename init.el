@@ -185,7 +185,18 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
+(setq package-enable-at-startup nil)
 (package-initialize)
+(require 'org)
+(require 'ox)
+(require 'cl)
+(eval-after-load 'ox ;; shouldn't be byte compiled.
+  '(when (and user-init-file (buffer-file-name)) ;; don't do it in async
+     (setq org-export-async-init-file
+           (expand-file-name "init-org-async.el" (file-name-directory
+                                                  user-init-file)))))
+
+(setq org-export-in-background 't)
 
 ;; Bootstrap 'use-package'
 (eval-after-load 'gnutls
@@ -314,14 +325,14 @@
   "2" 'split-window-below-and-switch
   "3" 'split-window-right-and-switch
   "0" 'delete-window
-  "z" 'suspend-frame
+  "z" 'delete-frame
   "d" 'dired
   "o" 'other-window
   "r" 'ido-recentf-open
   "g" 'magit
   "s" 'swiper-isearch
   "t" 'shell-pop
-  "c" 'delete-frame
+  "c" 'org-capture
   "a" 'org-agenda-list
   "-" 'text-scale-decrease
   "=" 'text-scale-increase)
@@ -429,11 +440,22 @@
 
 ;; Syntax highlighting in HTML using htmlize and in LaTeX using minted.
 (use-package htmlize)
-(setq org-latex-pdf-process
-      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+(defun my-auto-tex-cmd ()
+  "When exporting from .org with latex, automatically run latex,
+pdflatex, or xelatex as appropriate, using latexmk."
+  (let ((texcmd)))
+  ;; default command: xelatex via latexmk
+  (setq texcmd "latexmk -pdf -pdflatex=xelatex %f -outdir=%o -shell-escape")
+  ;; xelatex -> .pdf
+  (if (string-match "LATEX_CMD: pdflatex" (buffer-string))
+      (setq texcmd "latexmk -pdf %f -outdir=%o -shell-escape"))
+  ;; LaTeX compilation command
+  (setq org-latex-pdf-process (list texcmd)))
 (setq org-latex-listings 'minted)
+;; (setq org-latex-pdf-process
+;;       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+;;         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 ;; Make windmove work in Org mode:
 (add-hook 'org-shiftup-final-hook 'windmove-up)
 (add-hook 'org-shiftleft-final-hook 'windmove-left)
@@ -449,10 +471,7 @@
 (setq gc-cons-threshold 20000000)
 
 ;; Save backup files in /tmp, don't litter my directory
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+(setq backup-directory-alist '(("." . "~/.emacs_backups")))
 
 ;; Recognize that sentences end with a '.' and one space
 (setq sentence-end-double-space nil)
@@ -916,6 +935,21 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
+;; ─────────────────────────── Org-capture ──────────────────────────
+(setq org-capture-templates
+      '(("t" "TODO" entry (file+headline "~/agenda/personal.org" "Captured")
+         "* TODO \n  %U" :empty-lines 1)
+        ("s" "Scheduled TODO" entry (file+headline "~/agenda/personal.org" "Captured")
+         "* TODO \nSCHEDULED: %^t\n  %U" :empty-lines 1)
+        ("d" "Deadline TODO" entry (file+headline "~/agenda/personal.org" "Captured")
+         "* TODO \n  DEADLINE: %^t" :empty-lines 1)
+        ("p" "Priority" entry (file+headline "~/agenda/personal.org" "Captured")
+         "* TODO [#A] \n  SCHEDULED: %^t")
+        ("j" "Journal" entry (file+datetree "~/journal/log.org")
+         "* %U\n")))
+
+
+
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -1017,7 +1051,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
     (("a4paper, total={6in, 9in}" "geometry" nil)
      ("" "amsmath" nil)
      ("" "tabulary" nil))))
- '(org-latex-compiler "pdflatex")
+ '(org-latex-compiler "xelatex")
  '(org-latex-default-class "article")
  '(org-latex-default-packages-alist
    (quote
@@ -1048,6 +1082,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
    (quote
     (("" "minted" nil)
      ("a4paper, total={6in, 9in}" "geometry" nil))))
+ '(org-latex-pdf-process (my-auto-tex-cmd))
  '(org-modules
    (quote
     (ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus org-habit org-habit-plus ol-info ol-irc ol-mhe ol-rmail ol-w3m)))
