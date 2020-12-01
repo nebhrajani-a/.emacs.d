@@ -937,13 +937,13 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 ;; ─────────────────────────── Org-capture ──────────────────────────
 (setq org-capture-templates
-      '(("t" "TODO" entry (file+headline "~/agenda/personal.org" "Captured")
+      '(("t" "TODO" entry (file+headline "~/agenda/general.org" "Captured")
          "* TODO \n  %U" :empty-lines 1)
-        ("s" "Scheduled TODO" entry (file+headline "~/agenda/personal.org" "Captured")
+        ("s" "Scheduled TODO" entry (file+headline "~/agenda/general.org" "Captured")
          "* TODO \nSCHEDULED: %^t\n  %U" :empty-lines 1)
-        ("d" "Deadline TODO" entry (file+headline "~/agenda/personal.org" "Captured")
+        ("d" "Deadline TODO" entry (file+headline "~/agenda/general.org" "Captured")
          "* TODO \n  DEADLINE: %^t" :empty-lines 1)
-        ("p" "Priority" entry (file+headline "~/agenda/personal.org" "Captured")
+        ("p" "Priority" entry (file+headline "~/agenda/general.org" "Captured")
          "* TODO [#A] \n  SCHEDULED: %^t")
         ("j" "Journal" entry (file+datetree "~/journal/log.org")
          "* %U\n")))
@@ -1041,7 +1041,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(objed-cursor-color "#dc322f")
  '(org-agenda-files
    (quote
-    ("~/agenda/last_three_months.org" "~/agenda/jee.org" "~/agenda/work.org" "~/agenda/nss.org" "~/agenda/personal.org" "~/agenda/home.org" "~/agenda/school.org")))
+    ("~/agenda/general.org" "~/agenda/last_three_months.org" "~/agenda/nss.org" "~/agenda/school.org")))
  '(org-babel-load-languages (quote ((C . t) (python . t) (emacs-lisp . t))))
  '(org-babel-python-command "python3")
  '(org-confirm-babel-evaluate nil)
