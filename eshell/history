@@ -28,3 +28,17 @@ ls -altr
 cd ..
 ls -altr
 emacs words.txt 
+ls
+ls -altr
+clear
+
+time
+latexmk
+clear
+
+ls
+eshell
+scratch
+whoami
+help
+exit

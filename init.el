@@ -241,7 +241,7 @@
 
 ;; (if (display-graphic-p)
 
-(load-theme 'atom-one-dark t)
+(load-theme 'doom-city-lights t)
 
 ;; (load-theme 'spacemacs-dark t))
 
@@ -348,20 +348,26 @@
 ;; This is the old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; ───────────────────────── Spaceline config ─────────────────────────
-(require 'spaceline-config)
-(spaceline-spacemacs-theme)
-(setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-(set-face-attribute 'spaceline-evil-normal nil :foreground "black")
-(set-face-attribute 'spaceline-evil-insert nil :foreground "black")
-(set-face-attribute 'spaceline-evil-visual nil :foreground "black")
-(set-face-attribute 'spaceline-evil-emacs nil :foreground "black")
-(set-face-attribute 'spaceline-evil-motion nil :foreground "black")
-(set-face-attribute 'spaceline-evil-replace nil :foreground "black")
+;; ───────────────────────── Modeline config ─────────────────────────
+;; (require 'spaceline-config)
+;; (spaceline-spacemacs-theme)
+;; (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+;; (set-face-attribute 'spaceline-evil-normal nil :foreground "black")
+;; (set-face-attribute 'spaceline-evil-insert nil :foreground "black")
+;; (set-face-attribute 'spaceline-evil-visual nil :foreground "black")
+;; (set-face-attribute 'spaceline-evil-emacs nil :foreground "black")
+;; (set-face-attribute 'spaceline-evil-motion nil :foreground "black")
+;; (set-face-attribute 'spaceline-evil-replace nil :foreground "black")
+(use-package doom-modeline
+  :ensure t
+  :hook (after-init . doom-modeline-mode))
+(defvar doom-modeline-icon 't)
+(setq doom-modeline-continuous-word-count-modes '(markdown-mode gfm-mode org-mode))
+(setq doom-modeline-unicode-fallback 't)
+(setq doom-modeline-window-width-limit fill-column)
+
+;; Battery
 ;; (add-hook 'after-init-hook #'fancy-battery-mode)
-;; (use-package doom-modeline
-;;   :ensure t
-;;   :hook (after-init . doom-modeline-mode))
 
 ;; Rainbow delimiters setup
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -855,8 +861,8 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 (setq-default evil-escape-key-sequence "kj")
 
 ;; ──────────────────── Emacs Stuff for Discord ────────────────────
-(require 'elcord)
-(elcord-mode)
+;; (require 'elcord)
+;; (elcord-mode)
 
 ;; ────────────────── Highlighted Guides for Python ─────────────────
 (load-file "~/.emacs.d/elisp/highlight-indent-guides.el")
@@ -992,10 +998,10 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(delete-selection-mode t)
  '(doc-view-continuous t)
  '(doc-view-resolution 400)
+ '(doom-modeline-enable-word-count t)
  '(ediff-make-buffers-readonly-at-startup t)
  '(elcord-display-buffer-details nil)
  '(elcord-display-elapsed nil)
- '(elcord-mode t nil (elcord))
  '(emojify-emoji-set "emojione-v2.2.6-22")
  '(evil-want-keybinding nil)
  '(evil-want-minibuffer nil)
