@@ -1108,7 +1108,8 @@ This is the same as using \\[set-mark-command] with the prefix argument."
      (caml "ocaml"))))
  '(org-latex-packages-alist
    (quote
-    (("" "minted" nil)
+    (("" "booktabs" nil)
+     ("" "minted" nil)
      ("a4paper, total={6in, 9in}" "geometry" nil))))
  '(org-latex-pdf-process (my-auto-tex-cmd))
  '(org-modules
