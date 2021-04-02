@@ -43,7 +43,7 @@
 (global-set-key "\C-x\C-b" 'buffer-menu-other-window)
 
 (setq c-basic-offset 2)
-
+(add-hook 'c-mode-common-hook '(lambda () (c-toggle-hungry-state 1)))
 (setq c-mode-hook
       (function (lambda ()
 		  (setq c-brace-offset -2)
@@ -263,8 +263,8 @@
   :bind (("C-S-t" . shell-pop)))
 
 ;; Zoning
-(require 'zone)
-(zone-when-idle 120)
+;; (require 'zone)
+;; (zone-when-idle 120)
 
 ;; Globally use undo-tree mode
 (global-undo-tree-mode 1)
@@ -664,10 +664,10 @@ pdflatex, or xelatex as appropriate, using latexmk."
 ;; Turn on smooth scrolling. I don't want headaches.
 (smooth-scrolling-mode 1)
 (setq redisplay-dont-pause t
-  scroll-margin 1
-  scroll-step 1
-  scroll-conservatively 10000
-  scroll-preserve-screen-position 1)
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
 
 ;; Turn on narrow-to-region
 (put 'narrow-to-region 'disabled nil)
@@ -760,9 +760,6 @@ pdflatex, or xelatex as appropriate, using latexmk."
 
 ;; ──────────────────────────── Elpy setup ────────────────────────────
 (elpy-enable)
-
-;; ──────────────────────── Company stats mode ────────────────────────
-(add-hook 'after-init-hook 'company-statistics-mode)
 
 ;; ─────────────────────────── Magit setup ──────────────────────────
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -965,17 +962,17 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 
 (add-to-list 'org-latex-classes
-      '("org-report"
-         "\\documentclass{report}
+             '("org-report"
+               "\\documentclass{report}
          [DEFAULT-PACKAGES]
          [PACKAGES]
          [EXTRA]"
-         ("\\chapter{%s}" . "\\chapter*{%s}")
-         ("\\section{%s}" . "\\section*{%s}")
-         ("\\subsection{%s}" . "\\subsection*{%s}")
-         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-         ("\\paragraph{%s}" . "\\paragraph*{%s}")
-         ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+               ("\\chapter{%s}" . "\\chapter*{%s}")
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 
 ;; ───────────────────────── Custom set stuff ─────────────────────────
@@ -997,7 +994,6 @@ This is the same as using \\[set-mark-command] with the prefix argument."
    ["#21252B" "#E06C75" "#98C379" "#E5C07B" "#61AFEF" "#C678DD" "#56B6C2" "#ABB2BF"])
  '(blink-cursor-alist nil)
  '(blink-cursor-interval 0.6)
- '(c-basic-offset 2)
  '(case-fold-search t)
  '(comint-scroll-show-maximum-output t)
  '(company-backends

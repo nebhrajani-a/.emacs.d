@@ -42,3 +42,13 @@ scratch
 whoami
 help
 exit
+clear
+
+c
+clear
+
+ls
+ll
+ls
+gcc -c calc.tab.c
+exit
