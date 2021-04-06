@@ -852,6 +852,12 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 ;; ─────────────────────── Unbind m  ───────────────────────
 (define-key evil-normal-state-map (kbd "m") nil)
 
+(define-key evil-normal-state-map (kbd "L")  'windmove-right)
+(define-key evil-normal-state-map (kbd "H")  'windmove-left)
+(define-key evil-normal-state-map (kbd "K")  'windmove-up)
+(define-key evil-normal-state-map (kbd "J")  'windmove-down)
+
+
 ;; ──────────── Key-sequences setup (Key-Chord Dependency) ────────────
 (load-file "~/.emacs.d/elisp/key-chord.el")
 (load-file "~/.emacs.d/elisp/key-seq.el")
@@ -1142,9 +1148,9 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(linum-relative-current-symbol "")
  '(lpr-command "lp")
  '(objed-cursor-color "#dc322f")
- '(org-agenda-files
-   (quote
-    ("~/agenda/general.org" "~/agenda/last_three_months.org" "~/agenda/nss.org" "~/agenda/school.org")))
+ '(org-agenda-files (quote ("~/agenda/general.org")))
+ '(org-agenda-restore-windows-after-quit t)
+ '(org-agenda-window-setup (quote reorganize-frame))
  '(org-babel-load-languages (quote ((C . t) (python . t) (emacs-lisp . t))))
  '(org-babel-python-command "python3")
  '(org-confirm-babel-evaluate nil)
