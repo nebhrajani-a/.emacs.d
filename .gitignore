@@ -16,3 +16,8 @@
 /recentf
 /eshell
 /url
+/#*
+/.org*
+/network*
+/tramp
+/viper
