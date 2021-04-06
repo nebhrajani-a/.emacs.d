@@ -1,0 +1,315 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/aditya/ioi/inoi/" . "iarcsjud/")
+ ("/home/aditya/ioi/" . "algorithms/")
+ ("/home/aditya/aho_ullman/" . "2/")
+ ("/home/aditya/spacemacs/layers/+lang/" . "rust/")
+ ("/home/aditya/spacemacs/layers/+completion/" . "auto-completion/")
+ ("/home/aditya/spacemacs/layers/" . "+lang/")
+ ("/home/aditya/spacemacs/" . "layers/")
+ ("/home/aditya/playground/" . "covid_tracker/")
+ ("/home/aditya/discord_bots/" . "chinaal/")
+ ("/home/aditya/rsa-py/" . "src/")
+ ("/home/aditya/nebhrajani-a/posts/" . "new-age-software/")
+ ("/home/" . "aditya/")
+ ("/home/aditya/debate_club/presentations/" . "4/")
+ ("/home/aditya/debate_club/" . "syndicates/")
+ ("/home/aditya/journal/" . "17-09-2020/")
+ ("/home/aditya/nebhrajani-a/" . "posts/")
+ ("/auto/common/aditya/Documents/12th_standard/ip_project/" . "docs/")
+ ("/home/aditya/.emacs.d/elpa/org-9.3.6/etc/" . "styles/")
+ ("/home/aditya/.emacs.d/elpa/org-9.3.6/" . "etc/")
+ ("/auto/common/aditya/Documents/12th_standard/ip_notebook/" . "_minted-python/")
+ ("/tmp/" . "emacs1026/")
+ ("/auto/common/aditya/Documents/12th_standard/" . "ip_project/")
+ ("/home/aditya/.emacs.d/elpa/evil-collection-20200620.1214/modes/" . "doc-view/")
+ ("/home/aditya/.emacs.d/elpa/evil-collection-20200620.1214/" . "modes/")
+ ("/home/aditya/.emacs.d/elpa/" . "spotify-20200615.1418/")
+ ("/auto/common/aditya/Documents/nss/" . "meetings/")
+ ("/auto/common/aditya/Documents/" . "12th_standard/")
+ ("/home/aditya/ebooks/" . "concrete_mathematics/")
+ ("/auto/common/aditya/c_programs/" . "libll/")
+ ("/auto/common/aditya/" . "Documents/")
+ ("/auto/common/" . "aditya/")
+ ("/auto/" . "common/")
+ ("/" . "auto/")
+ ("/home/aditya/guitar/" . "gotten/")
+ ("/home/aditya/.emacs.d/" . "elisp/")
+ ("/home/aditya/" . "college_applications/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/aditya/"
+ "/home/aditya/college_applications/"
+ "/home/aditya/tmp/"
+ "/home/aditya/manim/"
+ "/home/aditya/ioi/algorithms/"
+ "/home/aditya/.emacs.d/"
+ "/home/aditya/journal/"
+ "/auto/common/aditya/Documents/12th_standard/ip_project/docs/"
+ "/auto/common/aditya/Documents/12th_standard/ip_project/"
+ "/home/aditya/Documents/"
+ "/home/aditya/ioi/inoi/iarcsjud/"
+ "/home/aditya/agenda/"
+ "/auto/common/aditya/Documents/12th_standard/ip_notebook/"
+ "/home/aditya/debate_club/syndicates/"
+ "/home/aditya/journal/17-09-2020/"
+ "/home/aditya/journal/22-09-2020/"
+ "/tmp/emacs1026/"
+ "/home/aditya/debate_club/table/"
+ "/home/aditya/debate_club/war_regiments/"
+ "/home/aditya/nebhrajani-a/posts/new-age-software/"
+ "/home/aditya/aho_ullman/2/"
+ "/home/aditya/spacemacs/"
+ "/home/aditya/playground/covid_tracker/"
+ "/home/aditya/nebhrajani-a/"
+ "/home/aditya/spacemacs/layers/+lang/rust/"
+ "/home/aditya/codechef/"
+ "/home/aditya/elisp/"
+ "/home/aditya/.emacs.d/elisp/"
+ "/home/aditya/debate_club/presentations/4/"
+ "/home/aditya/discord_bots/chinaal/"
+ "/auto/common/aditya/Documents/12th_standard/chemistry_investigatory_project/"
+ "/home/aditya/nebhrajani-a/stylesheets/"
+ "/home/aditya/nebhrajani-a/posts/emacs-intro/"
+ "/home/aditya/rsa-py/src/"
+ "/home/aditya/nebhrajani-a/posts/"
+ "/home/aditya/debate_club/presentations/3/"
+ "/home/aditya/Downloads/"
+ "/home/aditya/debate_club/presentations/2/"
+ "/home/aditya/debate_club/fine_outline/"
+ "/home/aditya/nebhrajani-a/recommendations/"
+ "/auto/common/aditya/c_programs/libll/"
+ "/auto/common/aditya/c_programs/quick_sort/"
+ "/auto/common/aditya/Documents/nss/"
+ "/home/aditya/ipp/"
+ "/home/aditya/Downloads/rsa-py-0294ce7a8975bea482061fb24e94281fcd712aa7/src/"
+ "/auto/common/aditya/Documents/12th_standard/ip_project/src/"
+ "/home/aditya/.emacs.d/elpa/spotify-20200615.1418/"
+ "/auto/common/aditya/Documents/12th_standard/obligations/"
+ "/auto/common/aditya/Documents/12th_standard/ip_notebook/documentation/"
+ "/home/aditya/.emacs.d/elpa/org-9.3.6/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".bashrc"
+ ".bashrc.swp"
+ ".newbashrc"
+ "questions.org"
+ "hanoi.c"
+ "hanio.c"
+ "hanoi.cpp"
+ "hanoi.py"
+ "test.py"
+ "example_scenes.py"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/aditya/" (24561 36216 902824 358000) "old_ip_project/" ".tex" ".dmrc" ".bash_history" "durga_emacs/" ".gimp-2.8/" ".SpaceVim.d/" ".gconf/" ".bashrc.swp" ".twittering-mode-user-info.gz" "agenda/" ".gnome2/" ".spacemacs" "strontium_bk/" ".aptitude/" ".~lock.yoga_richa4.docx#" "gitignore_fix.org" "mozilla.pdf" ".gitconfig" "misc/" "blog/" "exams/" ".emacs.d/" "installs/" ".tuxpaint/" "Pictures_from_godavari/" "nebhrajani-a/" ".vnc/" ".TabNine/" ".local/" ".aspell.en.prepl" "bin/" "neverball.log" ".cache/" ".mozilla/" ".octave_hist" ".SpaceVim/" "unsolved/" "debate_club/" "post-backups/" ".viminfo" "revocation.crt" ".pylint.d/" "ebooks/" "Screenshots/" ".Xauthority" "hobbs.mkv" ".thunderbird/" "Pictures/" ".audacity-data/" "discord_bots/" ".twittering-mode.gpg" "Desktop/" "VirtualBox VMs/" ".cargo/" ".ICEauthority" "Scores/" "college_applications/" ".compiz/" ".notes" ".rustup/" "News/" "samples/" ".ssh/" "naked-emacs/" "google_foorbar/" "Music/" "among-sus/" "emacs-intro/" ".wget-hsts" "help/" ".config/" ".swt/" ".git-credential-cache/" "Replays/" ".adobe/" "nebhrajani_a_v.key" "lisp/" "guitar/" "Templates/" ".bashrc_bak" ".gnuplot_history" "python-rsa/" "tuition/" ".gksu.lock" ".backup/" ".gnupg/" "boot/" ".neverball" "Videos/" "inoi/" ".xsession-errors" ".emacs_backups/" ".dbus/" "Documents/" ".gnome2_private/" ".tuxguitar-1.2/" ".linuxmint/" "neverballrc" "rani/" "ioi/" "chemacs/" ".nanorc" "aho_ullman/" "prog/" "journal/" "vijayn_emacs/" "spacemacs/" "playground/" ".bashrc" ".emacs-profiles.el" "hackorchid/" "snow.el/" "Downloads/" "prelude/" ".python_history" "manim/" ".texlive2017/" ".dvisvgm/" "subset_cc/" ".pki/" "tmp/" "Public/" ".aspell.en.pws" "ubuntu-font-family-0.80/" ".profile" ".ngrok2/" ".spacemacs.d/" "dwhelper/" ".sdirs" ".vim/" "teded/" ".thumbnails/" "todo/" "Geekbench-5.2.5-Linux/" ".armagetronad/" ".emacs" ".macromedia/" ".osh-update" ".twittering-mode-icons.gz" "CRUZER ORIGNAL/" "../" "./")
+
+ ("/home/aditya/college_applications/" (24561 36115 423073 737000) "_minted-questions/" "../" "#questions.org_archive#" "lors.org" "lors.tex" "questions.org" "./" "_minted-lors/" "lors.pdf" "questions.tex" "questions.pdf")
+
+ ("/home/aditya/.emacs.d/" (24551 10293 789274 715000) "recentf~" "eshell/" ".#init.el" "xkcd/" "elisp/" ".org-id-locations" "elpa/" ".git/" "README.org" "network-security.data" "init-org-async.el" "abbrev_defs" "../" "request/" "games/" ".cache/" "auto-save-list/" "ido.last" "smex-items" ".gitignore" "session.2b2bbb233-eb97-4262-837c-f6f2a516f81f" "undo/" "#recentf#" "bookmarks" "saveplace" "session.22f5d52a7-7a15-4f9d-9592-15f0ce6c29a1" "company-statistics-cache.el" "./" "snippets/" "magithub/" "dict/" "init.el" ".init.el.~undo-tree~" "session.2a4499f82-557b-4df9-9914-45864b4bb628" "emojis/" "session.22675c37b-59a3-4ca1-965c-f3531624ff77" "url/" "recentf" "ido.last~" "transient/" "session.2b9df93bd-3d57-42d4-a06c-a0ce3a9ad75e" "session.2a1ea480f-ecbe-48f7-8be1-73e590b9277e" "places")
+
+ ("/home/aditya/tmp/" (24536 30525 981707 346000) "demo.out" "test.log" "longer_letter.out" "test2.fdb_latexmk" "a.out" "longer_letter.aux" "demo.tex" "longer_letter.tex" "test2.dvi" "tex.tex" "math.tex" "math.log" "test.fdb_latexmk" "math.fdb_latexmk" "longer_letter.fdb_latexmk" "test.fls" "test2.pdf" "text.log" "test2.fls" "test.org" "math.aux" "hanoi.c" "tex.aux" "text.org" "anuja_python.fdb_latexmk" "test.rs" "math.pdf" "tex.tex~" "hanoi.py" "../" "tmp.toc" "texput.log" "tmp.log" "test.c~" "tmp.fls" "demo.fdb_latexmk" "test.pyg" "test.out" "tex.fls" "test2.aux" "math.fls" "test.dart" "text.pdf" "demo.fls" "tmp.tex" "test.py" "tmp.py" "tex.log" "tmp.aux" "test.aux" "test.pdf" "text.fdb_latexmk" "demo.org" "anuja_python.org" "./" "thoughts.org" "test.txt" "words.txt~" "tmp.org" "anuja_python.log" "longer_letter.log" "test.tex" "tmp.pdf" "tmp2.org" "anuja_python.fls" "text.fls" "demo.pdf" "anuja_python.tex" "longer_letter.fls" "text.tex" "anuja_python.aux" "longer_letter.org" "test.tex~" "test.txt~" "hanoi.cpp" "longer_letter.pdf" "test" "tmp.cpp" "test.js" "text.aux" "tex.fdb_latexmk" "a_thought.org" "math.dvi" "demo.log" "tmp.out" "text.dvi" "demo.aux" "test2.log" "demo.dvi" "tmp.fdb_latexmk" "anuja_python.pdf" "test2.tex")
+
+ ("/home/aditya/manim/" (24536 24738 632218 220000) "manimlib/" ".git/" "stage_scenes.py" "__pycache__/" "../" "environment.yml" "manim.py" "setup.cfg" ".gitignore" "Dockerfile" "test.py" "media/" "README.md" "docker-compose.yml" "example_scenes.py" "manim_docker_diagram.png" "./" "requirements.txt" "setup.py" "logo/" "LICENSE" "from_3b1b/" "travis/" ".travis.yml" "docs/" ".github/")
+
+ ("/home/aditya/ioi/algorithms/" (24527 33133 195494 807000) "a.out" "memoized_fibonacci.cpp" "djikstras_algorithm.cpp" "_minted-notebook/" "../" "topological_sort.cpp" "notebook.pdf" "dp_fibonacci.cpp" "notebook.org" "./" "binary_search.cpp" "notebook.org_archive" "bellman_ford.cpp" "bfs.cpp" "notebook.tex" "dfs.cpp")
+
+ ("/home/aditya/journal/" (24528 43650 856853 699000) "log.org" "../" "log.pdf" "./" "_minted-log/" "log.tex")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_project/docs/" (24519 11520 227529 264000) "python_rsa.fls" "python_rsa.bbl" "python_rsa.blg" "python_rsa.run.xml" "python_rsa.lol" "python_rsa.lof" "python_rsa.toc" "python_rsa.pdf" "python_rsa.out" "python_rsa.bcf" "python_rsa.log" "python_rsa.fdb_latexmk" "python_rsa.aux" "python_rsa.bib" "python_rsa.tex" "_minted-python_rsa/" "images/" "../" "./")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_project/" (24527 7205 77802 4000) "README.md" ".git/" "todo.org" "src/" "docs/" ".gitignore" "../" "./")
+
+ ("/auto/" (24527 6562 978413 773000) ".snapshot/" "common/" "backup/" "media/" ".extsnapshot/" "../" "./")
+
+ ("/home/aditya/Documents/" (24524 54424 872510 41000) "success (perhaps...)" "rap.png" "anjali_math_ia.aux" "_minted-anjali_math_ia/" "The Space Hotel.odt" "ac.png" "jazz.png" "_region_.prv/" "In-N-Out Burger/" "The Mosquito.pdf" "edm.png" "Twitter/" "Space Hotels for Morons.pdf" "At_10_x_10_it_looks_like_this.odt" "prv_debate_outline.log" "Untitled Document 1" "hmmm" "anjali_math_ia.lof" "g3.png" "Amazon -  The Everything Store Jeff Bezos and the Age of Amazon (Brad Stone)/" "debate_outline.pdf" "The Hobbit.pdf" "../" "Suhani TrivediNo." "Tuesdays with Morrie/" "Advice pt 2~" "Mistress and  Slave.mp4" "Product Key" "Space Hotels for Morons.odt" "debate_outline.tex" "karma1" "Twist." "debate_outline.aux" "anjali_math_ia.tex" "tmp.py" "Studying." ".#anjali_math_ia.tex" "The Mosquito.odt" "Damn thsi shit" "Starbucks.mp3" "_region_.log" "anjali_math_ia.pdf" "./" "Be even politer when you're angry." "a loop" "g2.png" "FORM.pdf" "debate_outline.log" "Advice pt 2" "Tips." "bolly.png" "Human%20Resources%20Final%20Document.docx_0odt" "anjali_math_ia.fdb_latexmk" "Google/" "I am" "raw.png" "Advice." "anjali_math_ia.fls" "debate_outline.fls" "The Toyota Way - Jeffrey Liker/" "Sanya Deshmukh No." "rock.png" "Ganesh-Chathurthi-2014.jpg" "rani/" "anjali_math_ia.out" "debate_outline.fdb_latexmk" "anjali_math_ia.toc" "g4.png" "pop.png" "50 Success Classics/" "prvt/" "debate_outline.tex~" "The Beatles/" "first.png" "anjali_math_ia.log" "hmm" ".~lock.b\\pack.tech_logo.odt#" "_region_.tex" "g1.png" "The Linux Command Line.pdf" "Facebook/" "THID" "info.jpg" "icl.png")
+
+ ("/home/aditya/ioi/" (24519 16176 941289 134000) ".git/" "README.org" "../" "zio/" "./" "algorithms/" "inoi/")
+
+ ("/home/aditya/ioi/inoi/iarcsjud/" (24518 28420 522752 582000) "a.out" "GREATESC.cpp" "HISPDNET.cpp" "../" "DRAWFIX.cpp" "TILES01.cpp" "./" "#HISPDNET.cpp#" "IARANK.cpp" "DIVSEQ.cpp" "RANKFRAD.cpp" "REPFREE.cpp" "TASKFRCE.cpp")
+
+ ("/home/aditya/agenda/" (24518 28363 362852 696000) "school.org" "nss.org" "general.org" "../" "./" "last_three_months.org")
+
+ ("/home/aditya/ioi/inoi/" (24511 35737 763703 625000) "iarcsjud/" "../" "./")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_notebook/" (24516 43213 377450 28000) "python.tex" "python.pdf" "python.dvi" "fig16.png" "fig15.png" "fig14.png" "fig13.png" "fig12.png" "fig0.png" "fig11.png" "fig10.png" "fig9.png" "fig8.png" "fig7.png" "fig6.png" "fig5.png" "fig4.png" "fig3.png" "fig2.png" "fig1.png" "python.org" ".gitignore" "README.md" ".git/" "mysql.pdf" "_minted-mysql/" "mysql.tex" "_minted-python/" "documentation/" "mysql.org" "../" "./")
+
+ ("/home/aditya/debate_club/table/" (24500 54252 51586 216000) "table.log" "table.tex" "../" "table.fls" "table.fdb_latexmk" "./" "table.pdf" "table.aux")
+
+ ("/home/aditya/debate_club/" (24506 30795 264099 358000) "fine_outline/" "debate_outline/" "_minted-marks/" "presentations/" "../" "syndicates/" "marks.tex" "marks.org" "./" "table/" ".#marks.org_archive" "code_of_conduct/" "war_regiments/" "marks.pdf")
+
+ ("/home/aditya/journal/22-09-2020/" (24515 12362 235067 368000) "log.org" "../" ".#log.org" "log.pdf" "./" "_minted-log/" "log.tex")
+
+ ("/tmp/emacs1026/" (24515 9334 303941 226000) "../" "server" "./")
+
+ ("/tmp/" (24515 11220 671012 134000) ".ICE-unix/" "Temp-c963ee4c-e081-40c1-b6af-ad3cfb5f509b/" "Temp-a16a9783-89cd-434d-b26a-23bccfb9cb87/" "mintUpdate/" ".X0-lock" "systemd-private-4a2673cef81441e2b77e10f6b11044e3-systemd-timesyncd.service-gk1N5I/" "emacs1026/" "systemd-private-4a2673cef81441e2b77e10f6b11044e3-ModemManager.service-wFUn4Z/" ".X11-unix/" ".xfsm-ICE-HFGYU0" ".font-unix/" "ssh-unyy2pesuqXx/" ".XIM-unix/" "systemd-private-4a2673cef81441e2b77e10f6b11044e3-colord.service-RFeXgL/" "babel-1892wRy/" "systemd-private-4a2673cef81441e2b77e10f6b11044e3-rtkit-daemon.service-jSZMf5/" "pulse-PKdhtXMmr18n/" "mozilla_aditya0/" "systemd-private-4a2673cef81441e2b77e10f6b11044e3-systemd-resolved.service-rYI4Es/" ".Test-unix/" "../" "./")
+
+ ("/home/aditya/nebhrajani-a/" (24494 14443 221925 462000) "index.html" ".git/" "stylesheets/" "../" "favicon.png" "posts/" "README.md" "./" "gpg.txt" "recommendations/")
+
+ ("/home/aditya/debate_club/war_regiments/" (24498 30042 734215 530000) "war_regiments.out" "table.tex" "war_regiments.aux" "war_regiments.toc" "war_regiments.log" "war_regiments.fls" "../" "./" "war_regiments.fdb_latexmk" "war_regiments.tex" "table.org" "war_regiments.pdf" "_minted-war_regiments/")
+
+ ("/home/aditya/nebhrajani-a/posts/new-age-software/" (24494 12557 950955 446000) "index.html" "../" "./")
+
+ ("/home/aditya/ipp/" (24494 12618 6369 879000) "enc" "oeap.py" "main2.py" "decrypted_file.txt" "encrypted_file.txt" "usr_data.pkl" "__pycache__/" "usr_data.py" "interaction_functions.py" "rsa_primitive.py" "prime_generator.py" "math_functions.py" "main.py" "first_primes.py" "file.txt" "data_conversion_primitives.py" "../" "./")
+
+ ("/home/aditya/guitar/sweet_child_of_mine/" (24453 43027 21390 117000) "solo_tabs.tex" "../" "solo_tabs.org" "tabs.pdf" "tabs.org" "./" "_minted-solo_tabs/" "tabs.tex" "solo_tabs.pdf")
+
+ ("/auto/common/aditya/c_programs/quick_sort/" (24475 54389 150802 993000) "a.out" "README.md" ".git/" "quick_sort.c" "quick_sort.c~" "qsort" "foobar" "candr" "candr~" "ret" "ret.c" "ret.c~" "../" "./")
+
+ ("/home/aditya/nebhrajani-a/posts/" (24465 37811 234719 966000) "index.html" "hathras-modern-man/" "../" "nep-critique/" "./" "new-age-software/")
+
+ ("/home/aditya/subset_cc/" (24461 22463 913595 934000) ".git/" "../" "README.md" "./" "src/" "docs/")
+
+ ("/home/aditya/aho_ullman/2/" (24458 65082 63126 647000) "lexical_analyzer/" "../" "./" "infix_to_postfix/")
+
+ ("/home/aditya/aho_ullman/" (24458 50134 583564 609000) "2/" "../" "./")
+
+ ("/home/aditya/nebhrajani-a/posts/emacs-intro/" (24457 24826 737220 188000) "index.html" "../" "./")
+
+ ("/home/aditya/.emacs.d/elisp/" (24457 15968 132212 838000) "verilog-init.el" "vhdl-hilit.el" "key-chord.el" "mvp" "bison-mode.el" "vhdl-abbrev-list" "v-mode.el" "auto-complete-auctex.el" "../" ".vijayn_emacs" "vhdl-welcome" "vhdl-functions.elc" "vhdl-mode.elc" "verilog-hilit.el" "kbd-macros.el" "faces.el" "vhdl-variables.elc" "bison-mode_old.el" "vline.el" "./" "dcsh-mode.el" "vhdlgrind" "hl319-xemacs.el" "verilog-add-funcs.el" "text.elc" "org-habit-plus.el" "highlight-indent-guides.el" "vhdl-abbreviations.elc" "block-nav.el" "verilog-mode.el" "verilog_init.el" "make-regexp.el" "flex-mode.el" "verilog-mode.el.old" "verilog.el" "emacs-keys.el" "vhdl-keys-list" "mymacros.el" "company-auctex.el" "key-seq.el")
+
+ ("/home/aditya/spacemacs/layers/+lang/rust/" (24446 47581 737547 144000) "packages.el" "README.org" "config.el" "../" "funcs.el" "img/" "./")
+
+ ("/home/aditya/playground/covid_tracker/" (24448 21420 909710 328000) "../" "./" "animation_1.gif" "grapher.py")
+
+ ("/home/aditya/spacemacs/" (24457 43949 447767 414000) "elpa/" ".git/" "../" ".cache/" ".gitignore" "core/" "tests/" "assets/" "README.md" "./" "COMMUNITY.org" "CONTRIBUTING.org" ".projectile" "init.el" "CHANGELOG.org" "news/" "spacemacs.mk" "layers/" "transient/" ".travis.yml" "private/" ".spacemacs.d" ".github/" "doc/" ".travis-build.sh")
+
+ ("/auto/common/aditya/" (24456 11233 558497 382000) "Languages.pptx" "yoga_richa4.docx" "._yoga_richa4.docx" "c_programs/" "misc/" "._LOS Tara.pdf" "._acts_presentation.m4v" "._070502_18170_10.wmv" "Pictures/" "._Constellations.docx" "._constellations.png" "info.txt~" "._ananya_doc.docx" "._Shivaji Museum Visit.docx" "arnav.txt~" "._2016-12-01-PHOTO-00000002.jpg" "Music/" "._Presentation 2.pdf" "._A History Project.pages" "ebooks/" ".DS_Store" "Documents/" "../" "./")
+
+ ("/home/aditya/doom-emacs/" (24452 5577 197275 311000) "init.example.el" ".git/" "../" ".gitignore" "core/" "Makefile" "README.md" "./" "init.el" "LICENSE" "test/" ".travis.yml" "modules/")
+
+ ("/home/aditya/playground/" (24444 11376 429273 275000) "codechef/" "../" "covid_tracker/" "./" "guessing_game/")
+
+ ("/home/aditya/spacemacs/layers/+lang/" (24437 58627 498662 103000) "bibtex/" "idris/" "php/" "extra-langs/" "python/" "scala/" "sql/" "elm/" "shell-scripts/" "asciidoc/" "octave/" "purescript/" "typescript/" "graphviz/" "fsharp/" "java/" "../" "shaders/" "markdown/" "erlang/" "racket/" "ess/" "go/" "csharp/" "yaml/" "faust/" "scheme/" "ocaml/" "html/" "clojure/" "lua/" "./" "elixir/" "agda/" "c-c++/" "ipython-notebook/" "emacs-lisp/" "haskell/" "common-lisp/" "javascript/" "sml/" "plantuml/" "ruby/" "rust/" "asm/" "d/" "swift/" "nim/" "latex/" "autohotkey/" "vimscript/" "windows-scripts/" "csv/")
+
+ ("/home/aditya/spacemacs/layers/+completion/auto-completion/" (24437 58627 466661 191000) "local/" "packages.el" "README.org" "config.el" "../" "funcs.el" "./")
+
+ ("/home/aditya/spacemacs/layers/+completion/" (24437 58627 470661 305000) "ivy/" "../" "./" "helm/" "auto-completion/")
+
+ ("/home/aditya/spacemacs/layers/" (24437 58627 526662 899000) "+tags/" "+chat/" "+frameworks/" "../" "+web-services/" "+source-control/" "auto-layer.el" "+misc/" "+spacemacs/" "+tools/" "+checkers/" "+emacs/" "+vim/" "+pair-programming/" "LAYERS.org" "./" "+lang/" "+completion/" "+email/" "+os/" "+themes/" "+fun/" "+distributions/" "+intl/")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_project/src/" (24445 21245 171977 500000) "enc" "oeap.py" "main2.py" "decrypted_file.txt" "encrypted_file.txt" "usr_data.pkl" "__pycache__/" "usr_data.py" "interaction_functions.py" "rsa_primitive.py" "prime_generator.py" "math_functions.py" "main.py" "first_primes.py" "file.txt" "data_conversion_primitives.py" "../" "./")
+
+ ("/home/aditya/debate_club/presentations/4/" (24432 34153 206671 973000) "4.tex" "4.out" "4.snm" "../" "4.fdb_latexmk" "./" "4.toc" "4.nav" "4.aux" "4.pdf" "4.log" "4.fls")
+
+ ("/home/aditya/prelude/" (24446 45818 164401 27000) "elpa/" ".git/" "../" "sample/" ".gitignore" "themes/" "core/" "prelude-cheatsheet.pdf" "var/" "vendor/" "CONTRIBUTING.md" "README.md" "./" "mkdocs.yml" "CHANGELOG.md" ".projectile" "init.el" "savefile/" "transient/" "modules/" "utils/" ".github/" "doc/" "projectile-bookmarks.eld" "personal/")
+
+ ("/home/aditya/codechef/" (24432 29031 752528 491000) "a.out" "TREE2.cpp" "../" "./" "TREE2.c" "COVID19B.cpp" "COVID19B_2.cpp" "TREE2.py")
+
+ ("/home/aditya/chemacs/" (24437 48138 789213 806000) ".git/" "README.org" "../" "./" "CHANGELOG.md" "install.ps1" "install.sh" ".emacs")
+
+ ("/home/aditya/elisp/" (24436 8793 21379 814000) "basic_programs.lsp" "../" "./")
+
+ ("/auto/common/" (24433 22316 165480 449000) ".Trash-1026/" "lib/" "durga/" "aditya/" ".Trashes/" ".DS_Store" "vijayn/" "sona/" "software/" "scripts/" "docs/" "bin/" "Temporary Items/" "Network Trash Folder/" ".cvsroot/" ".TemporaryItems/" ".AppleDesktop/" ".AppleDB/" "../" "./")
+
+ ("/auto/common/aditya/c_programs/libll/" (24399 30597 466975 669000) "README.md" ".git/" "docs/" "test/" "src/" "../" "./")
+
+ ("/auto/common/aditya/Documents/12th_standard/chemistry_investigatory_project/" (24431 1954 558068 452000) "final_project.fls" "final_project.tex" "final_project.bbl" "final_project.blg" "final_project.run.xml" "final_project.lot" "final_project.lof" "final_project.toc" "final_project.pdf" "final_project.out" "final_project.bcf" "final_project.log" "final_project.fdb_latexmk" "final_project.aux" "final_project.bib" "images/" "../" "./")
+
+ ("/home/aditya/discord_bots/chinaal/" (24431 18900 845197 941000) "bot.py" "../" "./")
+
+ ("/home/aditya/debate_club/presentations/" (24428 25145 468446 504000) "2/" "../" "./" "3/" "4/")
+
+ ("/home/aditya/discord_bots/" (24431 9895 254269 420000) "../" "chinaal/" "./")
+
+ ("/home/aditya/nebhrajani-a/stylesheets/" (24429 36429 535220 203000) "latexmathml.js" "hack.css" "../" "css.css" "./" "index.css" "standard.css")
+
+ ("/home/aditya/rsa-py/src/" (24429 37869 92338 18000) "usr_data.py" "interaction_functions.py" "rsa_primitive.py" "dec.txt" "data_conversion_primitives.py" "__pycache__/" "../" "file.txt" "math_functions.py" "main.py" "prime_generator.py" "enc.txt" "./" "usr_data.pkl" "first_primes.py")
+
+ ("/home/aditya/rsa-py/" (24429 36621 242608 549000) ".git/" "../" ".gitignore" "README.md" "./" "src/" "docs/")
+
+ ("/home/" (21901 28485 646109 223000) "vijayn/" "../" "sona/" "./" "durga/" "aditya/")
+
+ ("/home/aditya/nebhrajani-a/posts/nep-critique/" (24427 3099 692803 621000) "index.html" "../" "./")
+
+ ("/home/aditya/debate_club/presentations/3/" (24420 46763 804778 71000) "3.out" "3.fdb_latexmk" "3.nav" "tables.org" "../" "3.pdf" "3.tex.tex" "3.tex.pdf" "venn.png" "3.log" "_minted-3.tex/" "3.toc" "3.tex.log" "./" "3.tex" "3.fls" "tables.tex" "3.tex.toc" "3.tex.aux" "3.snm" "3.tex.out" "3.aux" "venn.pdf")
+
+ ("/home/aditya/debate_club/syndicates/" (24411 3999 33382 254000) "syndicates.out" "syndicates.aux" "syndicates.org" "../" "syndicates.pdf" "./" "syndicates.log" "syndicates.tex")
+
+ ("/home/aditya/nebhrajani-a/recommendations/" (24416 42900 459276 872000) "index.html" "../" "./")
+
+ ("/home/aditya/journal/17-09-2020/" (24418 63374 147187 367000) "log.out" "log.org" "../" "missfont.log" "log.pdf" "./" "log.log" "log.aux" "log.toc" "_minted-log/" "log.tex")
+
+ ("/home/aditya/debate_club/presentations/2/" (24411 17858 707785 774000) "2.nav" "../" "2.fls" "2.snm" "./" "2.out" "2.log" "2.fdb_latexmk" "2.tex" "2.aux" "2.toc" "2.pdf")
+
+ ("/home/aditya/debate_club/fine_outline/" (24411 3986 661391 125000) "../" "fine_outline.tex" "./" "fine_outline.pdf" "fine_outline.org")
+
+ ("/home/aditya/debate_club/debate_outline/" (24411 3904 825451 227000) "debate_outline.out" "debate_outline.org" "debate_outline.pdf" "../" "debate_outline.tex" "debate_outline.aux" "./" "debate_outline.log")
+
+ ("/auto/common/aditya/c_programs/linked_list/" (24269 4688 468177 862000) "ll_api.c" "ll_api.c~" "a.out" "ll_api.h" "ll_api.h~" "linked_list.c" "structure.c" "../" "./")
+
+ ("/home/aditya/Downloads/rsa-py-0294ce7a8975bea482061fb24e94281fcd712aa7/src/" (24380 63913 808950 867000) "usr_data.py" "interaction_functions.py" "main2.py" "rsa_primitive.py" "data_conversion_primitives.py" "__pycache__/" "../" "file.txt" "math_functions.py" "main.py" "prime_generator.py" "./" "decrypted_file.txt" "usr_data.pkl" "first_primes.py" "encrypted_file.txt")
+
+ ("/auto/common/aditya/Documents/12th_standard/" (24373 6894 320594 945000) "ip_project/" "obligations/" "ip_notebook/" "chemistry_investigatory_project/" "../" "./")
+
+ ("/auto/common/aditya/c_programs/" (24367 49760 649365 291000) "array_inversions/" "merge_sort/" "tree/" "libll/" "tmp/" "linked_list_lib/" "function_pointers/" "minprintf/" "linked_list_alt/" "strings/" "linked_list/" "quick_sort/" "swap/" "iterative_sort/" "../" "./")
+
+ ("/home/aditya/.emacs.d/elpa/spotify-20200615.1418/" (24350 55229 553745 247000) "spotify-pkg.el" "spotify.el" "../" "spotify-autoloads.el" "./" "spotify.elc")
+
+ ("/home/aditya/.emacs.d/elpa/" (24350 53712 17647 306000) "flycheck-color-mode-line-20200528.416/" "undo-tree-0.7.4.signed" "cpu-sos-readme.txt" "bts-readme.txt" "org-table-wrap-functions.el" "org-evil-20180620.1517/" "zone-nyan-readme.txt" "airline-themes-readme.txt" "company-bibtex-20171105.644/" "goto-chg-readme.txt" "evil-readme.txt" "pfuture-20200425.1357/" "dired-subtree-20180922.1615/" "company-readme.txt~" "undo-tree-readme.txt" "evil-numbers-20140606.1251/" "ac-emoji-readme.txt" "amx-readme.txt" "pretty-symbols-20140814.959/" "treemacs-20200625.2056/" "ahungry-theme-readme.txt" "gmail-message-mode-readme.txt" "git-commit-20200701.2112/" "evil-macros-1.14.0/" "tablist-readme.txt" "names-20180321.1155/" "company-try-hard-readme.txt" "org-table-wrap-functions.el~" "easy-kill-readme.txt" "dakrone-theme-readme.txt" "xbm-life-readme.txt~" "rainbow-delimiters-readme.txt~" "restart-emacs-20180601.1031/" "vlc-readme.txt" "evil-smartparens-readme.txt" "dired-open-20180922.1113/" "company-auctex-readme.txt" "company-try-hard-20200417.1603/" "auctex-latexmk-readme.txt~" "xbm-life-readme.txt" "company-math-readme.txt" "chess-readme.txt" "ample-theme-readme.txt" "evil-surround-20200603.2216/" "company-20200616.2354/" "company-box-readme.txt" "let-alist-1.0.6/" "company-shell-readme.txt~" "ht-20200217.2331/" "org-edit-latex-20170908.1522/" "flycheck-20200610.1809/" "archives/" "guess-language-20200615.1208/" "didyoumean-readme.txt" "let-alist-readme.txt~" "pkg-info-20150517.1143/" "dired-rainbow-20190722.1109/" "company-statistics-20170210.1933/" "butler-readme.txt" "smex-20151212.2209/" "zone-matrix-0.0.1/" "sx-readme.txt" "academic-phrases-readme.txt" "clang-capf-readme.txt" "academic-phrases-20180723.1021/" "pretty-mode-20190615.2045/" "undo-propose-readme.txt" "ahungry-theme-20180131.328/" "emms-20200612.2058/" "highlight-20190710.1527/" "auctex-12.2.3/" "ace-window-20200606.1259/" "viking-mode-readme.txt" "guess-language-readme.txt~" "irony-readme.txt~" "goto-chg-20200603.1911/" "white-theme-readme.txt" "math-symbol-lists-20200131.2333/" "evil-easymotion-20200424.135/" "promise-20200530.630/" "rainbow-delimiters-20191018.1233/" "hydra-20200608.1528/" "gnuplot-mode-20171013.1616/" "xbm-life-20200506.1217/" "gh-md-20151207.1740/" "gnu-elpa-keyring-update-2019.3/" "async-20200113.1745/" "powerline-readme.txt~" "easy-kill-20181114.2330/" "spacemacs-theme-20200615.1304/" "org-pomodoro-20190530.1445/" "emojify-20200513.1627/" "treemacs-magit-readme.txt" "smartparens-20200324.2147/" "apiwrap-20180602.2231/" "company-web-20180402.1155/" "gh-md-readme.txt~" "web-completion-data-20160318.848/" "flycheck-pycheckers-20200428.40/" "company-c-headers-20190825.1631/" "rich-minority-20190419.1136/" "ztree-20191108.2234/" "academic-phrases-readme.txt~" "clang-format-readme.txt" "ghub-20200725.1419/" "web-readme.txt" "use-package-20200618.1804/" "floobits-20180801.524/" "company-auctex-readme.txt~" "smooth-scroll-20130322.414/" "powerline-readme.txt" "bind-key-20191110.416/" "spotify/" "common-lisp-snippets-20180226.1523/" "guess-language-readme.txt" "treemacs-readme.txt" "virtual-auto-fill-readme.txt" "zone-quotes-20200126.1129/" "company-emoji-readme.txt" "howdoyou-readme.txt" "markdown-mode-readme.txt" "gnuplot-20200322.53/" "asx-readme.txt" "org-9.3.6/" "typing-game-readme.txt" "company-readme.txt" "achievements-readme.txt~" "distinguished-theme-readme.txt~" "xkcd-readme.txt" "transient-20200719.955/" "company-ctags-readme.txt" "eww-lnum-20150102.1512/" "company-math-readme.txt~" "evil-mc-extras-readme.txt" "dashboard-readme.txt" "avy-20200624.1148/" "company-irony-readme.txt~" "shell-pop-20200315.1139/" "dash-20200524.1947/" "company-irony-c-headers-readme.txt" "treemacs-evil-20200302.558/" "company-web-readme.txt" "company-irony-readme.txt" "f-20191110.1357/" "theme-changer-readme.txt" "company-math-20200131.2337/" "company-tabnine-readme.txt" "irony-readme.txt" "s-readme.txt~" "powerline-evil-readme.txt" "zweilight-theme-readme.txt" "flymd-readme.txt~" "cl-lib-0.6.1/" "company-tabnine-20200327.2137/" "common-lisp-snippets-readme.txt" "esxml-20171129.807/" "evil-commentary-20170413.1451/" "company-auctex-20200529.1835/" "typing-game-20160426.1220/" "company-ngram-readme.txt" "2048-game-20200417.259/" "dired-hacks-utils-20190522.950/" "bind-key-readme.txt" "use-package-readme.txt~" "ox-twbs-20200602.1854/" "s-20180406.808/" "company-anaconda-readme.txt~" "fancy-battery-20150101.1204/" "pdf-tools-20200512.1524/" "undo-tree-0.7.4/" "chronometer-readme.txt" "xkcd-20160419.1130/" "ghub+-20191229.1748/" "epl-20180205.2049/" "evil-magit-20200604.110/" "pdf-tools-readme.txt" "mybigword-readme.txt" "auto-correct-readme.txt" "pdf-tools-readme.txt~" "htmlize-20191111.2130/" "company-bibtex-readme.txt" "ahungry-theme-readme.txt~" "vim-region-readme.txt" "yasnippet-20200524.2215/" "exwm-readme.txt" "company-try-hard-readme.txt~" "log4e-20200420.745/" "2048-game-readme.txt" "elpy-20200527.2021/" "treepy-20191108.2217/" "achievements-readme.txt" "c-c-combo-readme.txt" "evil-org-readme.txt" "flymd-readme.txt" "magit-20200723.236/" "company-bibtex-readme.txt~" "rainbow-mode-1.0.4/" "company-c-headers-readme.txt" "company-fuzzy-readme.txt" "highlight-indentation-20181204.839/" "flymd-20160617.1214/" "tablist-20200427.2205/" "caps-lock-readme.txt" "monitor-20161018.1144/" "howdoyou-20191118.2222/" "grip-mode-readme.txt" "theme-changer-20171221.1927/" "lv-20200507.1518/" "spacemacs-theme-20200324.1107/" "linum-relative-20180124.1047/" "company-box-readme.txt~" "ace-flyspell-readme.txt" "distinguished-theme-20151216.2015/" "evil-mc-extras-20170202.1649/" "xkcd-readme.txt~" "beacon-20190104.1931/" "markdown-mode-readme.txt~" "clang-format+-readme.txt" "browse-kill-ring-20200210.921/" "theme-changer-readme.txt~" "company-irony-c-headers-readme.txt~" "alert-20200303.2118/" "distinguished-theme-readme.txt" "fast-scroll-readme.txt" "auctex-latexmk-readme.txt" "evil-magit-readme.txt" "markdown-preview-eww-readme.txt" "markdown-mode-20200724.633/" "whole-line-or-region-20200305.221/" "company-shell-readme.txt" "ewal-spacemacs-themes-readme.txt" "company-emoji-20200612.1902/" "gh-md-readme.txt" "undo-tree-readme.txt~" "magithub-readme.txt" "spaceline-20191230.1221/" "dakrone-theme-readme.txt~" "all-the-icons-20200527.1304/" "with-editor-20200720.2014/" "memoize-20200103.2036/" "treemacs-icons-dired-20200530.2129/" "framesize-readme.txt" "typing-readme.txt" "dakrone-theme-20170801.1933/" "org-bullets-20200317.1740/" "company-ctags-readme.txt~" "captain-readme.txt" "2048-game-readme.txt~" "simple-mpc-20200523.1804/" "yasnippet-snippets-20200606.1149/" "crappy-jsp-mode-readme.txt" "let-alist-readme.txt" "typing-game-readme.txt~" "parsebib-20200513.2352/" "zone-nyan-20200506.1207/" "smart-mode-line-20190527.1156/" "async-readme.txt" "use-package-readme.txt" "pyvenv-20191202.1039/" "airline-themes-readme.txt~" "autopair-20160304.1237/" "s-readme.txt" "ynab-readme.txt" "goto-chg-readme.txt~" "nadvice-0.3/" "evil-readme.txt~" "smtpmail-multi-20160218.2349/" "spotify-readme.txt" "request-20200517.1305/" "powerline-evil-20190603.340/" "company-web-readme.txt~" "boon-readme.txt" "chess-2.0.4/" "evil-20200530.659/" "smart-mode-line-powerline-theme-20160706.38/" "gnupg/" "seq-2.20/" "treemacs-20200716.2041/" "powerline-20200105.2053/" "cdlatex-20200506.739/" "bufshow-readme.txt" "company-c-headers-readme.txt~" "unicode-escape-20160614.1234/" "evil-mc-20200228.1535/" "smooth-scrolling-20161002.1949/" "ac-c-headers-readme.txt" "company-anaconda-readme.txt" "bbdb-20200102.403/" "visual-fill-column-20200428.816/" "gntp-20141025.250/" "auctex-cluttex-readme.txt" "emojify-logos-20180814.917/" "sx-readme.txt~" "python-readme.txt" "bufshow-readme.txt~" "writeroom-mode-20200519.37/" "quiz-readme.txt" "rainbow-delimiters-readme.txt" "bbyac-readme.txt" "company-20200525.101/" "treemacs-magit-20200421.1426/" "ducpel-readme.txt" "../" "./")
+
+ ("/home/aditya/.emacs.d/elpa/spotify/" (24350 53718 125633 410000) "spotify-playlist-search.el" "spotify-connect.el" "spotify.el" ".git/" "spotify_oauth2_callback_server.py" "../" ".gitignore" "spotify-apple.el" "README.md" "img/" "spotify-device-select.el" "spotify-dbus.el" "./" "spotify-controller.el" "oauth2.el" "spotify-track-search.el" "spotify-api.el" "spotify-remote.el" "COPYING")
+
+ ("/home/aditya/emacs/" (24350 49811 944254 594000) "../" "./" ".AppleDouble/")
+
+ ("/auto/common/aditya/Documents/12th_standard/obligations/" (24350 32964 758023 865000) "ngo.snm" "ngo.toc" "ngo.nav" "ngo.out" "ngo.aux" "ngo.log" "ngo.tex" "ngo.org" "_minted-ngo/" "ngo.pdf" "../" "./")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_notebook/_minted-python/" (24348 3028 889600 974000) "7386D44BDDE21A3015EBE0A865955D4E3912F267D03A7C2F5D4ACCE44E15A438.pygtex" "D26B8B70B6FBA6E885314E36FC6604F23912F267D03A7C2F5D4ACCE44E15A438.pygtex" "vim.pygstyle" "F9676AC96D2A0568CE62553125FFBDAD3912F267D03A7C2F5D4ACCE44E15A438.pygtex" "B3A70FA959E00BDAC6C69B11B3DD2AF43912F267D03A7C2F5D4ACCE44E15A438.pygtex" "emacs.pygstyle" "default-pyg-prefix.pygstyle" "../" "./")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_notebook/documentation/" (24347 51631 905017 320000) "python_org.org" "../" "./")
+
+ ("/home/aditya/guitar/gotten/" (24345 35321 812448 355000) "../" "tabs.pdf" "tabs.org" "./" "tabs.tex")
+
+ ("/auto/common/aditya/Documents/nss/" (24345 28839 80655 974000) "main.fls" "main.tex" "main.bbl" "main.blg" "main.run.xml" "main.lot" "main.lof" "main.toc" "main.bcf" "main.pdf" "main.out" "main.log" "main.fdb_latexmk" "main.aux" "main.bib" "images/" "tmp2.tex" "tables.org" "tables.org~" "tmp.tex" "tmp.tex~" "fancychapters.sty" "_region_.tex" "../" "./")
+
+ ("/home/aditya/.emacs.d/elpa/org-9.3.6/" (24347 50073 418177 838000) "org-table.el" "org-lint.el" "ob-calc.el" "ob-picolisp.el" "org-feed.el" "org-attach.el" "org-datetree.el" "ob-gnuplot.el" "ob-hledger.el" "ob-awk.el" "ob-org.el" "ob-latex.el" "ox-beamer.el" "ox.el" "ob-coq.el" "ob-fortran.el" "org-ctags.el" "org-pcomplete.el" "org-faces.el" "ox-publish.el" "ol-mhe.el" "org-habit.el" "ob.el" "dir" "org-timer.el" "ob-io.el" "ob-C.el" "ob-sed.el" "ox-latex.el" "ob-shell.el" "ob-python.el" "orgcard.pdf" "ob-eval.el" "org-colview.el" "ob-forth.el" "ox-texinfo.el" "ol-eshell.el" "ol-irc.el" "ob-octave.el" "ob-shen.el" "org-plot.el" "ob-dot.el" "org-tempo.el" "org-loaddefs.el" "ol-w3m.el" "ob-ledger.el" "ob-lilypond.el" "ob-stan.el" "ob-haskell.el" "ob-ebnf.el" "org-mouse.el" "ob-lob.el" "ob-tangle.el" "ob-scheme.el" "org-archive.el" "ol.el" "org-macro.el" "ol-docview.el" "ol-bbdb.el" "org-id.el" "ob-abc.el" "ob-ref.el" "org-element.el" "org-capture.el" "ob-makefile.el" "ox-md.el" "org-indent.el" "ob-lisp.el" "org-pkg.el" "org-compat.el" "ob-plantuml.el" "ob-asymptote.el" "ob-perl.el" "ob-C.elc" "ob-sqlite.el" "ob-css.el" "ob-vala.el" "ob-sass.el" "ob-comint.el" "ob-sql.el" "ob-ocaml.el" "ob-J.el" "ob-processing.el" "ob-groovy.el" "README_ELPA" "ob-screen.el" "ox-man.el" "org-attach-git.el" "ol-info.el" "ob-core.el" "ob-js.el" "org-install.el" "ob-maxima.el" "ox-ascii.el" "org-num.el" "ob-mscgen.el" "org-src.el" "org-duration.el" "org-clock.el" "org-entities.el" "ob-matlab.el" "org" "ox-html.el" "ob-lua.el" "ob-java.el" "org-protocol.el" "ol-gnus.el" "etc/" "org-macs.el" "ol-bibtex.el" "ol-rmail.el" "ox-odt.el" "ob-R.el" "ox-org.el" "org-list.el" "org-goto.el" "ob-eshell.el" "org-keys.el" "org-autoloads.el" "org-inlinetask.el" "org-version.el" "ob-emacs-lisp.el" "org-crypt.el" "org-footnote.el" "ox-icalendar.el" "ob-clojure.el" "ob-ruby.el" "ob-table.el" "org-mobile.el" "ol-eww.el" "ox.elc" "COPYING" "ob-exp.el" "ob-ditaa.el" "org.el" "org-agenda.el" "../" "./")
+
+ ("/home/aditya/.emacs.d/elpa/org-9.3.6/etc/styles/" (24304 16005 907598 796000) "OrgOdtStyles.xml" "README" "../" "./" "OrgOdtContentTemplate.xml")
+
+ ("/home/aditya/.emacs.d/elpa/org-9.3.6/etc/" (24304 16005 915598 782000) "styles/" "../" "./" "ORG-NEWS")
+
+ ("/tmp/babel-5660qsp/" (24346 39771 439228 914000) "../" "./" "python-56609zT" "python-5660kLy" "python-5660xcs")
+
+ ("/auto/common/aditya/Documents/12th_standard/ip_class_stuff/" (24346 38881 294758 609000) "series.py" "../" "./")
+
+ ("/home/aditya/Scores/" (24318 60711 356948 847000) "../" "./" "mym2.txt")
+
+ ("/home/aditya/personal/" (24266 20577 346155 613000) "../" "./" "diary/")
+
+ ("/home/aditya/guitar/" (24337 25854 324239 629000) "gotten/" "../" "hotel_california/" "./" "sweet_child_of_mine/" "perfect/" "wish_you_were_here/")
+
+ ("/home/aditya/ebooks/concrete_mathematics/" (24308 52384 387503 866000) "stable.aux" "notes.org" "notes.tex~" "notes.pdf" "../" "stable.toc" "stable.fdb_latexmk" "stable.log" "stable.out" "ltximg/" "stable.pdf" "notes.tex" "./" ".floo" ".#notes.org.tex" "notes.org~" "stable.tex" ".flooignore" "stable.fls" ".#notes.org" "#notes.org.tex#")
+
+ ("/home/aditya/guitar/hotel_california/" (24309 48941 791953 363000) "../" "./" "intro.tex" "intro.pdf" "intro.org")
+
+ ("/home/aditya/.emacs.d/elpa/evil-collection-20200620.1214/modes/doc-view/" (24305 49701 80560 672000) "../" "./" "evil-collection-doc-view.el" "evil-collection-doc-view.elc")
+
+ ("/home/aditya/.emacs.d/elpa/evil-collection-20200620.1214/modes/" (24305 49699 232568 350000) "dired/" "woman/" "elisp-mode/" "xwidget/" "compile/" "eshell/" "which-key/" "doc-view/" "diff-mode/" "magit/" "python/" "cus-theme/" "youtube-dl/" "guix/" "ebib/" "debbugs/" "hackernews/" "slime/" "free-keys/" "restclient/" "package-menu/" "view/" "indium/" "ebuku/" "deadgrep/" "flycheck/" "omnisharp/" "ivy/" "../" "w3m/" "image/" "outline/" "vc-annotate/" "emms/" "anaconda-mode/" "pass/" "log-view/" "monky/" "info/" "tar-mode/" "evil-mc/" "image+/" "ggtags/" "disk-usage/" "grep/" "dired-sidebar/" "alchemist/" "rtags/" "term/" "image-dired/" "sly/" "tetris/" "vc-git/" "2048-game/" "profiler/" "auto-package-update/" "ag/" "realgud/" "rjsx-mode/" "process-menu/" "popup/" "macrostep/" "ibuffer/" "help/" "proced/" "git-timemachine/" "vlf/" "edbi/" "./" "apropos/" "cmake-mode/" "gnus/" "mu4e-conversation/" "racer/" "docker/" "eval-sexp-fu/" "nov/" "pdf/" "notmuch/" "epa/" "speedbar/" "robe/" "bookmark/" "custom/" "minibuffer/" "daemons/" "go-mode/" "kotlin-mode/" "lsp-ui-imenu/" "flymake/" "reftex/" "lispy/" "helm/" "debug/" "js2-mode/" "ediff/" "eglot/" "tide/" "trashed/" "hungry-delete/" "elfeed/" "imenu/" "edebug/" "calc/" "vterm/" "p4/" "occur/" "wgrep/" "cider/" "hg-histedit/" "ztree/" "transmission/" "typescript-mode/" "eww/" "ert/" "arc-mode/" "imenu-list/" "quickrun/" "leetcode/" "prodigy/" "log-edit/" "bm/" "elisp-refs/" "helpful/" "wdired/" "vc-dir/" "comint/" "dashboard/" "tablist/" "ruby-mode/" "man/" "vdiff/" "elisp-slime-nav/" "unimpaired/" "xref/" "mu4e/" "simple/" "neotree/" "magit-todos/" "company/" "lua-mode/" "calendar/" "geiser/" "buff-menu/")
+
+ ("/home/aditya/.emacs.d/elpa/evil-collection-20200620.1214/" (24305 49700 440563 331000) "evil-collection-pkg.el" "../" "evil-collection.el" "modes/" "./" "evil-collection.elc" "evil-collection-autoloads.el")
+
+ ("/auto/common/aditya/Documents/nss/meetings/" (24288 44078 567517 823000) "plan.org" "plan.org~" "../" "./")
+
+ ("/auto/common/aditya/Documents/" (24275 51512 652259 115000) "test.gpg" "nss/" "12th_standard/" "test_latex/" "._Anuja's 4th Grade Summer Vacation Project.pages" "Anuja's 4th Grade Summer Vacation Project.pages" ".DS_Store" "The Adventures of Tintin/" "School/" ".localized" "Microsoft User Data/" "LEGO Creations/" "Home/" "Collage/" "../" "./")
+
+ ("/home/aditya/ebooks/" (24296 45109 51542 421000) "ANSI_Common_Lisp_-_Paul_Graham.pdf" "ibmyp3.pdf" "../" "newfile" "RubiksCubeEbook.pdf" "./" "lisp/" "Mathematics 9.pdf" "Learning GNU Emacs, 3rd Edition ( PDFDrive.com ).pdf" "Mathematics 8.pdf" "Concrete Mathematics 2e.pdf" "ibmyp4.pdf" "Learning the vi and Vim Editors, 7e.pdf" "concrete_mathematics/")
+
+ ("/home/aditya/Desktop/" (24260 55143 73793 853000) "daily-water-req-result" "virtualbox.desktop" "Sahej.MOV" "Group_2.MOV" "../" "Untitled 1.ods" "Ubuntu.desktop" "Daily Water Intake Calculator_files/" "Saloni.MOV" "main-qimg-254101d0ef5c34a7f3033e536fee34b4-c.jpeg" "Anshu.MOV" "2.jpg" "Fuck_files/" "Int-Sci" "iphone_transfers/" "Int-idkwaht" "Write up, Science." "./" "Fuck.html" "JCW-JC23-Foot-Stool-with-Oral-Service-4-300x300.jpg" "Daily Water Intake Calculator.html" "Kala_Chashma_Kid.MOV" "Altoids_orignal/" "Old Firefox Data/" "Firefox feeds backup.opml" "Group_1.MOV" "try.html" "Ganesh Chaturthi.pdf" "LOS Tara.pdf" "Seeyog.MOV" "hmm" "The Third Awakening" "main-qimg-c8cb4cc9bc16aeb990d4fdd0c887112b-c.jpeg" "Saanvi.MOV" "Memories_Hangouts/")
+
+ ("/auto/common/aditya/c_programs/function_pointers/" (24261 7436 664085 856000) "function_pointers.c" "function_pointers.c~" "../" "./")
+
+ ("/home/aditya/guitar/wish_you_were_here/" (24304 22829 516410 369000) "../" "wish_you_were_here.fls" "./" "wish_you_were_here.org" "wish_you_were_here.tex" "wish_you_were_here.pdf" "wish_you_were_here.fdb_latexmk")
+
+ ("/home/aditya/.emacs.d/dict/" (24276 58699 302957 778000) "../" "english.txt~" "c.txt" "./" "english.txt")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
