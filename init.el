@@ -229,8 +229,7 @@
 ;; (defun apply-theme ()
 ;;   "Apply the `spacemacs-dark' theme and make frames just slightly transparent."
 ;;   (interactive)
-;;   (load-theme 'spacemacs-dark t)
-;;   (transparency 100))
+;;   (load-theme 'doom-city-lights t))
 
 ;; ;; If this code is being evaluated by emacs --daemon, ensure that each subsequent frame is themed appropriately.
 ;; (if (daemonp)
@@ -975,6 +974,86 @@ This is the same as using \\[set-mark-command] with the prefix argument."
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 
+(if (not (daemonp))
+	 (centaur-tabs-mode)
+
+  (defun centaur-tabs-daemon-mode (frame)
+	 (unless (and (featurep 'centaur-tabs) (centaur-tabs-mode-on-p))
+		(run-at-time nil nil (lambda () (centaur-tabs-mode)))))
+  (add-hook 'after-make-frame-functions #'centaur-tabs-daemon-mode))
+
+(use-package centaur-tabs
+  :config
+  (setq centaur-tabs-style "bar"
+        centaur-tabs-height 32
+        centaur-tabs-enable-key-bindings t
+        centaur-tabs-set-icons t
+        centaur-tabs-cycle-scope 'tabs
+        centaur-tabs-set-bar 'over)
+  (centaur-tabs-headline-match)
+  (setq centaur-tabs-gray-out-icons 'buffer)
+  ;; (centaur-tabs-enable-buffer-reordering)
+  ;; (setq centaur-tabs-adjust-buffer-order t)
+  (setq uniquify-separator "/")
+  (setq uniquify-buffer-name-style 'forward)
+  (defun centaur-tabs-buffer-groups ()
+    "`centaur-tabs-buffer-groups' control buffers' group rules.
+
+ Group centaur-tabs with mode if buffer is derived from `eshell-mode' `emacs-lisp-mode' `dired-mode' `org-mode' `magit-mode'.
+ All buffer name start with * will group to \"Emacs\".
+ Other buffer group by `centaur-tabs-get-group-name' with project name."
+    (list
+     (cond
+      ;; ((not (eq (file-remote-p (buffer-file-name)) nil))
+      ;; "Remote")
+      ((or (string-equal "*" (substring (buffer-name) 0 1))
+           (memq major-mode '(magit-process-mode
+                              magit-status-mode
+                              magit-diff-mode
+                              magit-log-mode
+                              magit-file-mode
+                              magit-blob-mode
+                              magit-blame-mode
+                              )))
+       "Emacs")
+      ((derived-mode-p 'prog-mode)
+       "Editing")
+      ((derived-mode-p 'dired-mode)
+       "Dired")
+      ((memq major-mode '(helpful-mode
+                          help-mode))
+       "Help")
+      ((memq major-mode '(org-mode
+                          org-agenda-clockreport-mode
+                          org-src-mode
+                          org-agenda-mode
+                          org-beamer-mode
+                          org-indent-mode
+                          org-bullets-mode
+                          org-cdlatex-mode
+                          org-agenda-log-mode
+                          TeX-mode
+                          tex-mode
+                          latex-mode
+                          LaTeX-mode
+                          markdown-mode
+                          markdown-view-mode
+                          diary-mode))
+       "Markup")
+      (t
+       (centaur-tabs-get-group-name (current-buffer))))))
+  :hook
+  (dashboard-mode . centaur-tabs-local-mode)
+  (term-mode . centaur-tabs-local-mode)
+  (calendar-mode . centaur-tabs-local-mode)
+  (org-agenda-mode . centaur-tabs-local-mode)
+  (helpful-mode . centaur-tabs-local-mode)
+  :bind
+  (:map evil-normal-state-map
+        ("g t" . centaur-tabs-forward)
+        ("g T" . centaur-tabs-backward)))
+
+
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -1114,7 +1193,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (latex-math-preview buffer-move evil-matchit selectric-mode emojify adaptive-wrap theme-magic dart-mode lsp-mode dad-joke key-chord key-seq js2-mode doom-modeline company-box ag smart-jump flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion floobits common-lisp-snippets caps-lock cdlatex bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (centaur-tabs latex-math-preview buffer-move evil-matchit selectric-mode emojify adaptive-wrap theme-magic dart-mode lsp-mode dad-joke key-chord key-seq js2-mode doom-modeline company-box ag smart-jump flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion floobits common-lisp-snippets caps-lock cdlatex bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#262626")))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
