@@ -1060,6 +1060,72 @@ This is the same as using \\[set-mark-command] with the prefix argument."
         ("g T" . centaur-tabs-backward)))
 
 
+;; ────────────────────── Website Python Script ─────────────────────
+(defun org-outline-overlay-data (&optional use-markers)
+  "Return a list of the locations of all outline overlays.
+These are overlays with the `invisible' property value `outline'.
+The return value is a list of cons cells, with start and stop
+positions for each overlay.
+If USE-MARKERS is set, return the positions as markers."
+  (let (beg end)
+    (org-with-wide-buffer
+     (delq nil
+       (mapcar (lambda (o)
+             (when (eq (overlay-get o 'invisible) 'outline)
+               (setq beg (overlay-start o)
+                 end (overlay-end o))
+               (and beg end (> end beg)
+                (if use-markers
+                (cons (copy-marker beg)
+                      (copy-marker end t))
+                  (cons beg end)))))
+           (overlays-in (point-min) (point-max)))))))
+
+(defun org-set-outline-overlay-data (data)
+  "Create visibility overlays for all positions in DATA.
+DATA should have been made by `org-outline-overlay-data'."
+  (org-with-wide-buffer
+   (org-show-all)
+   (dolist (c data) (org-flag-region (car c) (cdr c) t 'outline))))
+
+(defvar-local my-org-outline-state nil
+  "Place for saving org outline state before reverting the buffer.")
+
+(put 'my-org-outline-state 'permanent-local t)
+
+(defun my-org-save-outline-state ()
+  "Save org outline state in `my-org-outline-state'.
+It can be recovered afterwards with `my-org-recover-outline-state'."
+  (setq my-org-outline-state (org-outline-overlay-data t)))
+
+(defun my-org-restore-outline-state ()
+  "Save org outline state in `my-org-outline-state'.
+It can be recovered afterwards with `my-org-recover-outline-state'."
+  (when my-org-outline-state
+    (org-set-outline-overlay-data my-org-outline-state)
+    (setq my-org-outline-state nil)))
+
+(defun my-org-install-save-outline-state ()
+  "Configure org to preserve the outline state at revert-buffer."
+  (add-hook 'before-revert-hook #'my-org-save-outline-state nil t)
+  (add-hook 'after-revert-hook #'my-org-restore-outline-state nil t))
+
+(add-hook 'org-mode-hook #'my-org-install-save-outline-state)
+
+(defun revert-buffer-no-confirm ()
+  "Revert buffer without confirmation."
+  (interactive) (revert-buffer t t))
+
+(defun calculate-reading-time ()
+  "Find the reading time of input file and add it to the right spot."
+  (interactive "p")
+  (when (string-equal "index.org" (file-name-nondirectory buffer-file-name))
+      (shell-command-to-string (format "python3 ~/.emacs.d/scripts/reading_length.py %s"
+                                       buffer-file-name))
+      (revert-buffer-no-confirm)))
+
+(add-hook 'after-save-hook #'calculate-reading-time)
+
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -1155,11 +1221,14 @@ This is the same as using \\[set-mark-command] with the prefix argument."
  '(org-babel-python-command "python3")
  '(org-confirm-babel-evaluate nil)
  '(org-ellipsis "⤵")
+ '(org-export-date-timestamp-format "%e %B %Y")
  '(org-export-latex-packages-alist
    (quote
     (("a4paper, total={6in, 9in}" "geometry" nil)
      ("" "amsmath" nil)
      ("" "tabulary" nil))))
+ '(org-html-postamble t)
+ '(org-html-postamble-format (quote (("en" "<hr><p>Created in %c.</p>"))))
  '(org-latex-compiler "xelatex")
  '(org-latex-default-class "article")
  '(org-latex-default-packages-alist

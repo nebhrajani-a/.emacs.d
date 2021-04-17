@@ -1850,7 +1850,7 @@ INFO is a plist used as a communication channel."
          (title (org-export-data (plist-get info :title) info))
          ;; Set title to an invisible character instead of leaving it
          ;; empty, which is invalid.
-         (title (if (org-string-nw-p title) title "&lrm;"))
+         (title (if (org-string-nw-p title) title (concat "/nebhrajani/" (file-name-directory (file-relative-name buffer-file-name "~/nebhrajani-a.github.io/")))))
          (author (and (plist-get info :with-author)
                       (let ((auth (plist-get info :author)))
                         (and auth
