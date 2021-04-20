@@ -1293,6 +1293,19 @@ Operates over buffer BUF"
 	  (buffer-list))
     extension-names))
 
+(defcustom centaur-tabs-enable-ido-completion t
+  "Non-nil means use `ido-completing-read' for completing reads else `completing-read'."
+  :group 'centaur-tabs
+  :type 'boolean)
+
+(defun centaur-tabs-completing-read (prompt choices)
+  "Prompt user with PROMPT to select from CHOICES using a completing read.
+Refer to  the variable `centaur-tabs-enable-ido-completion'."
+  (interactive)
+  (if centaur-tabs-enable-ido-completion
+      (ido-completing-read prompt choices)
+    (completing-read prompt choices)))
+
 ;;;;;;;;;;;;;;;;;;;;;;; Default configurations ;;;;;;;;;;;;;;;;;;;;;;;
 
 (mapc (lambda (hook)

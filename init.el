@@ -1116,15 +1116,14 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
   "Revert buffer without confirmation."
   (interactive) (revert-buffer t t))
 
-(defun calculate-reading-time ()
-  "Find the reading time of input file and add it to the right spot."
+(defun calculate-reading-time (backend)
+  "Find the reading time of input file and add it to the right spot. (BACKEND)."
   (interactive "p")
   (when (string-equal "index.org" (file-name-nondirectory buffer-file-name))
       (shell-command-to-string (format "python3 ~/.emacs.d/scripts/reading_length.py %s"
-                                       buffer-file-name))
-      (revert-buffer-no-confirm)))
+                                       buffer-file-name))))
 
-(add-hook 'after-save-hook #'calculate-reading-time)
+(add-hook 'org-export-before-processing-hook #'calculate-reading-time)
 
 ;; ───────────────────────── Custom set stuff ─────────────────────────
 ;; Do not write anything past this comment. This is where Emacs will
@@ -1146,6 +1145,7 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
  '(blink-cursor-alist nil)
  '(blink-cursor-interval 0.6)
  '(case-fold-search t)
+ '(centaur-tabs-auto-hide t)
  '(comint-scroll-show-maximum-output t)
  '(company-backends
    (quote
@@ -1228,7 +1228,9 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
      ("" "amsmath" nil)
      ("" "tabulary" nil))))
  '(org-html-postamble t)
- '(org-html-postamble-format (quote (("en" "<hr><p>Created in %c.</p>"))))
+ '(org-html-postamble-format
+   (quote
+    (("en" "<hr><p style=\"font-size: 75%%\">Created in GNU %c.</p>"))))
  '(org-latex-compiler "xelatex")
  '(org-latex-default-class "article")
  '(org-latex-default-packages-alist
