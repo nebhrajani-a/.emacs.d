@@ -850,7 +850,7 @@ This is the same as using \\[set-mark-command] with the prefix argument."
             (setq flycheck-python-pylint-executable "python3")))
 
 ;; ─────────────────────── Unbind m  ───────────────────────
-(define-key evil-normal-state-map (kbd "m") nil)
+;; (define-key evil-normal-state-map (kbd "m") nil)
 
 (define-key evil-normal-state-map (kbd "L")  'windmove-right)
 (define-key evil-normal-state-map (kbd "H")  'windmove-left)
@@ -859,11 +859,11 @@ This is the same as using \\[set-mark-command] with the prefix argument."
 
 
 ;; ──────────── Key-sequences setup (Key-Chord Dependency) ────────────
-(load-file "~/.emacs.d/elisp/key-chord.el")
-(load-file "~/.emacs.d/elisp/key-seq.el")
+;; (load-file "~/.emacs.d/elisp/key-chord.el")
+;; (load-file "~/.emacs.d/elisp/key-seq.el")
 
-(key-chord-mode 1)
-(key-seq-define-global "km" 'save-buffer)
+;; (key-chord-mode 1)
+;; (key-seq-define-global "km" 'save-buffer)
 ;; (key-seq-define-global (kbd "km") (kbd "C-x C-s"))
 
 ;; ────────── Use qw to escape from anything and everything ─────────
@@ -1258,11 +1258,7 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
      (cperl "perl")
      (shell-script "bash")
      (caml "ocaml"))))
- '(org-latex-packages-alist
-   (quote
-    (("" "booktabs" nil)
-     ("" "minted" nil)
-     ("a4paper, total={6in, 9in}" "geometry" nil))))
+ '(org-latex-packages-alist (quote (("" "booktabs" nil) ("" "minted" nil))))
  '(org-latex-pdf-process (my-auto-tex-cmd))
  '(org-modules
    (quote
