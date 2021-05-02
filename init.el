@@ -552,6 +552,7 @@ pdflatex, or xelatex as appropriate, using latexmk."
 ;; Unbind M-. and M- in evil-mode
 (define-key evil-normal-state-map (kbd "M-.") nil)
 (define-key evil-normal-state-map (kbd "M-,") nil)
+(define-key evil-visual-state-map (kbd ";") 'comment-dwim)
 
 ;; Unbind C-y since I want to use it with evil-mc, and I don't want vim-like scrolling
 (dolist (map '(evil-motion-state-map
