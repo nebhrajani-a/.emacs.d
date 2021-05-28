@@ -5,6 +5,12 @@
 
 (define-abbrev-table 'Info-edit-mode-abbrev-table '())
 
+(define-abbrev-table 'TeX-error-overview-mode-abbrev-table '())
+
+(define-abbrev-table 'TeX-output-mode-abbrev-table '())
+
+(define-abbrev-table 'TeX-special-mode-abbrev-table '())
+
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
 (define-abbrev-table 'awk-mode-abbrev-table
@@ -39,6 +45,8 @@
 
 (define-abbrev-table 'display-time-world-mode-abbrev-table '())
 
+(define-abbrev-table 'doctex-mode-abbrev-table '())
+
 (define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
 
 (define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
@@ -65,6 +73,14 @@
 
 (define-abbrev-table 'evil-list-view-mode-abbrev-table '())
 
+(define-abbrev-table 'eww-bookmark-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-buffers-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-history-mode-abbrev-table '())
+
+(define-abbrev-table 'eww-mode-abbrev-table '())
+
 (define-abbrev-table 'flex-mode-abbrev-table '())
 
 (define-abbrev-table 'flycheck-error-list-mode-abbrev-table '())
@@ -79,11 +95,7 @@
 
 (define-abbrev-table 'git-commit-elisp-text-mode-abbrev-table '())
 
-(define-abbrev-table 'global-abbrev-table
-  '(
-    ("e" "ge']
-" nil 0)
-   ))
+(define-abbrev-table 'global-abbrev-table '())
 
 (define-abbrev-table 'gnus-group-mode-abbrev-table '())
 
@@ -112,6 +124,8 @@
 (define-abbrev-table 'js2-jsx-mode-abbrev-table '())
 
 (define-abbrev-table 'js2-mode-abbrev-table '())
+
+(define-abbrev-table 'latex-mode-abbrev-table '())
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
@@ -161,6 +175,8 @@
 
 (define-abbrev-table 'occur-mode-abbrev-table '())
 
+(define-abbrev-table 'org-export-stack-mode-abbrev-table '())
+
 (define-abbrev-table 'org-mode-abbrev-table '())
 
 (define-abbrev-table 'outline-mode-abbrev-table '())
@@ -170,6 +186,8 @@
 (define-abbrev-table 'pike-mode-abbrev-table
   '(
    ))
+
+(define-abbrev-table 'plain-tex-mode-abbrev-table '())
 
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
 
@@ -195,6 +213,8 @@
 
 (define-abbrev-table 'shell-mode-abbrev-table '())
 
+(define-abbrev-table 'slitex-mode-abbrev-table '())
+
 (define-abbrev-table 'snippet-mode-abbrev-table '())
 
 (define-abbrev-table 'special-mode-abbrev-table '())
@@ -207,6 +227,10 @@
 
 (define-abbrev-table 'term-mode-abbrev-table '())
 
+(define-abbrev-table 'tex-mode-abbrev-table '())
+
+(define-abbrev-table 'tex-shell-abbrev-table '())
+
 (define-abbrev-table 'text-mode-abbrev-table '())
 
 (define-abbrev-table 'treemacs-mode-abbrev-table '())
@@ -217,11 +241,19 @@
 
 (define-abbrev-table 'use-package-statistics-mode-abbrev-table '())
 
+(define-abbrev-table 'vc-bzr-log-view-mode-abbrev-table '())
+
 (define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-hg-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-mtn-log-view-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-svn-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'verilog-mode-abbrev-table
   '(

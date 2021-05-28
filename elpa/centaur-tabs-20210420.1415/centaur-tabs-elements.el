@@ -315,6 +315,18 @@ Taken from `doom-modeline'."
   :group 'centaur-tabs
   :type 'string)
 
+;;; New tab button
+;;
+(defcustom centaur-tabs-show-new-tab-button t
+  "When non-nil, show the button to create a new tab."
+  :group 'centaur-tabs
+  :type 'boolean)
+
+(defcustom centaur-tabs-new-tab-text " + "
+  "Text icon to show in the new-tab button."
+  :group 'centaur-tabs
+  :type 'string)
+
 ;;; Separators
 ;;
 (defvar centaur-tabs-style-left nil)

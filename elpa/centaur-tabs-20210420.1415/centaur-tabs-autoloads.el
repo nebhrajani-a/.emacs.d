@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "centaur-tabs" "centaur-tabs.el" (24702 57670
-;;;;;;  578740 161000))
+;;;### (autoloads nil "centaur-tabs" "centaur-tabs.el" (24725 16222
+;;;;;;  936779 828000))
 ;;; Generated autoloads from centaur-tabs.el
 
 (autoload 'centaur-tabs-local-mode "centaur-tabs" "\
@@ -40,7 +40,7 @@ Returns non-nil if the new state is enabled.
 ;;;***
 
 ;;;### (autoloads nil "centaur-tabs-functions" "centaur-tabs-functions.el"
-;;;;;;  (24702 57670 570740 206000))
+;;;;;;  (24725 16222 932779 887000))
 ;;; Generated autoloads from centaur-tabs-functions.el
 
 (autoload 'centaur-tabs-backward "centaur-tabs-functions" "\
@@ -78,7 +78,7 @@ Select the next visible tab.
 ;;;***
 
 ;;;### (autoloads nil "centaur-tabs-interactive" "centaur-tabs-interactive.el"
-;;;;;;  (24702 57670 594740 70000))
+;;;;;;  (24725 16222 944779 709000))
 ;;; Generated autoloads from centaur-tabs-interactive.el
 
 (autoload 'centaur-tabs-counsel-switch-group "centaur-tabs-interactive" "\
@@ -89,7 +89,7 @@ Display a list of current buffer groups using Counsel.
 ;;;***
 
 ;;;### (autoloads nil nil ("centaur-tabs-elements.el" "centaur-tabs-pkg.el")
-;;;;;;  (24702 57670 566740 229000))
+;;;;;;  (24725 16222 924780 6000))
 
 ;;;***
 

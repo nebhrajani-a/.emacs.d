@@ -257,6 +257,12 @@ When not specified, ELLIPSIS defaults to ‘...’."
     map)
   "Keymap used for setting mouse events for a tab.")
 
+(defvar centaur-tabs-new-tab-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (vector centaur-tabs-display-line 'mouse-1) 'centaur-tabs-new-tab--button)
+    map)
+  "Keymap used for setting mouse events for new tab button.")
+
 ;;; Events and event functions
 ;;
 (defun centaur-tabs-buffer-close-tab (tab)
@@ -301,12 +307,16 @@ When not specified, ELLIPSIS defaults to ‘...’."
   (select-window (posn-window (event-start event)))
   (centaur-tabs-backward))
 
-
 (defun centaur-tabs-forward--button (event)
   "Same as centaur-tabs-forward, but changing window to EVENT source."
   (interactive "e")
   (select-window (posn-window (event-start event)))
   (centaur-tabs-forward))
+
+(defun centaur-tabs-new-tab--button (event)
+  (interactive "e")
+  (select-window (posn-window (event-start event)))
+  (centaur-tabs--create-new-tab))
 
 (defun centaur-tabs-move-current-tab-to-left--button (evt)
   "Same as centaur-tabs-move-current-tab-to-left, but ensuring the tab will remain visible.  The active window will the the EVT source."
@@ -769,7 +779,8 @@ template element."
       (nreverse elts)
       (propertize "% "
                   'face (list :background padcolor)
-                  'pointer 'arrow)))
+                  'pointer 'arrow)
+      (centaur-tabs-line-format--new-button)))
     ))
 
 (defun centaur-tabs-line-format--buttons ()
@@ -786,6 +797,16 @@ template element."
                    'local-map centaur-tabs-forward-tab-map
                    'help-echo "Next tab"))
     ""))
+
+(defun centaur-tabs-line-format--new-button ()
+  "Return the new-tab button fragment at the right end of the
+header line."
+  (if centaur-tabs-show-new-tab-button
+      (concat
+       (propertize (centaur-tabs-button-tab centaur-tabs-new-tab-text)
+                   'local-map centaur-tabs-new-tab-map
+                   'help-echo "Create new tab")
+    "")))
 
 (defun centaur-tabs-line ()
   "Return the header line templates that represent the tab bar.
@@ -1234,6 +1255,30 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
      "OrgMode")
     (t
      (centaur-tabs-get-group-name (current-buffer))))))
+
+(defun centaur-tabs--create-new-empty-buffer ()
+  "Open a New empty buffer."
+  (interactive)
+  (let ((buf (generate-new-buffer "New empty")))
+    (switch-to-buffer buf)
+    (funcall (and initial-major-mode))
+    (setq buffer-offer-save t)))
+
+(defun centaur-tabs--create-new-tab ()
+  "Create a context-aware new tab."
+  (interactive)
+  (cond
+   ((eq major-mode 'eshell-mode)
+    (eshell t))
+   ((eq major-mode 'vterm-mode)
+    (vterm t))
+   ((eq major-mode 'term-mode)
+    (ansi-term "/bin/bash"))
+   ((derived-mode-p 'eww-mode)
+    (let ((current-prefix-arg 4))
+      (call-interactively #'eww)))
+   (t
+    (centaur-tabs--create-new-empty-buffer))))
 
 (defun centaur-tabs-hide-tab (x)
   "Do no to show buffer X in tabs."

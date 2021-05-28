@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: atrr_latex
+# key: <al
+# --
+#+ATTR_LATEX: $1

@@ -536,6 +536,7 @@ pdflatex, or xelatex as appropriate, using latexmk."
 (define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
 (define-key evil-motion-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
 (define-key evil-motion-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-normal-state-map (kbd "s") 'save-buffer)
 
 ;; Evil-mode: Make horizontal movement cross lines
 (setq-default evil-cross-lines t)
@@ -553,6 +554,9 @@ pdflatex, or xelatex as appropriate, using latexmk."
 (define-key evil-normal-state-map (kbd "M-.") nil)
 (define-key evil-normal-state-map (kbd "M-,") nil)
 (define-key evil-visual-state-map (kbd ";") 'comment-dwim)
+(define-key evil-visual-state-map (kbd "q") 'fill-paragraph)
+
+
 
 ;; Unbind C-y since I want to use it with evil-mc, and I don't want vim-like scrolling
 (dolist (map '(evil-motion-state-map
@@ -1214,6 +1218,7 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
  '(keyboard-coding-system (quote utf-8-unix))
  '(linum-relative-current-symbol "")
  '(lpr-command "lp")
+ '(max-lisp-eval-depth 10000)
  '(objed-cursor-color "#dc322f")
  '(org-agenda-files (quote ("~/agenda/general.org")))
  '(org-agenda-restore-windows-after-quit t)
@@ -1228,6 +1233,7 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
     (("a4paper, total={6in, 9in}" "geometry" nil)
      ("" "amsmath" nil)
      ("" "tabulary" nil))))
+ '(org-export-with-smart-quotes t)
  '(org-html-postamble t)
  '(org-html-postamble-format
    (quote
@@ -1250,7 +1256,8 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
      ("" "textcomp" t nil)
      ("" "amssymb" t nil)
      ("" "capt-of" nil nil)
-     ("hidelinks" "hyperref" nil nil))))
+     ("hidelinks" "hyperref" nil nil)
+     ("a4paper, total={6in,9in}" "geometry" nil nil))))
  '(org-latex-minted-langs
    (quote
     ((python "python")
@@ -1267,7 +1274,7 @@ It can be recovered afterwards with `my-org-recover-outline-state'."
  '(org-timer-default-timer 10)
  '(package-selected-packages
    (quote
-    (centaur-tabs latex-math-preview buffer-move evil-matchit selectric-mode emojify adaptive-wrap theme-magic dart-mode lsp-mode dad-joke key-chord key-seq js2-mode doom-modeline company-box ag smart-jump flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion floobits common-lisp-snippets caps-lock cdlatex bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
+    (ido-vertical-mode centaur-tabs latex-math-preview buffer-move evil-matchit selectric-mode emojify adaptive-wrap theme-magic dart-mode lsp-mode dad-joke key-chord key-seq js2-mode doom-modeline company-box ag smart-jump flycheck-rust racer swiper cargo rust-mode powerthesaurus move-text gnu-elpa-keyring-update gnu-elpa flycheck-aspell highlight-indent-guides minimap elcord evil-escape evil-leader company-fuzzy web-mode company-quickhelp atom-one-dark-theme atom-dark-theme laguna-theme doom-themes treemacs-all-the-icons twittering-mode spotify evil-mc-extras evil-magit treemacs-magit company-try-hard company-statistics elpy auctex evil-easymotion floobits common-lisp-snippets caps-lock cdlatex bbdb gnuplot-mode gnuplot dired-open dired-rainbow dired-subtree treemacs-icons-dired treemacs-evil treemacs company-emoji howdoyou zone-nyan chess flycheck-pycheckers dashboard fancy-battery spaceline smartparens ztree zone-quotes zone-matrix yasnippet-snippets xkcd xbm-life writeroom-mode whole-line-or-region use-package typing-game theme-changer spacemacs-theme smooth-scrolling smooth-scroll smex smart-mode-line-powerline-theme simple-mpc shell-pop restart-emacs rainbow-mode rainbow-delimiters pretty-symbols pretty-mode powerline-evil pdf-tools ox-twbs org-pomodoro org-evil org-bullets nadvice htmlize guess-language gh-md flymd flycheck-color-mode-line eww-lnum evil-surround evil-numbers evil-mc evil-macros evil-commentary emojify-logos emms easy-kill distinguished-theme dired-hacks-utils dakrone-theme company-web company-math company-c-headers company-bibtex company-auctex browse-kill-ring beacon autopair all-the-icons ahungry-theme academic-phrases 2048-game)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#262626")))
  '(powerline-default-separator (quote wave))
  '(powerline-default-separator-dir (quote (right . right)))
