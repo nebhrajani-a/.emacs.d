@@ -34,7 +34,7 @@ $ git clone https://github.com/nebhrajani-a/.emacs.d
 | SPC s | swiper-isearch                |
 | SPC t | shell-pop                     |
 | SPC c | delete-frame                  |
-| SPC a | org-agenda-list)              |
+| SPC a | org-agenda-list               |
 | SPC - | text-scale-decrease           |
 | SPC = | text-scale-increase           |
 
