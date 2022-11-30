@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: my_println!
+# key: pr
+# --
+println!("${1:str}", ${2:value});

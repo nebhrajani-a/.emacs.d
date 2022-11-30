@@ -1,0 +1,13 @@
+# key: cclr
+# name: 391cc caller
+# --
+pushl %eax
+                pushl %ecx
+                pushl %edx
+                # push fn args here
+                call $1
+                addl $$2, %esp
+                movl %eax, %edi
+                popl %edx
+                popl %ecx
+                popl %eax

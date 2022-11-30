@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: sicp
+# key: <sisrc
+# --
+#+BEGIN_SRC racket :lang sicp :eval no-export :exports both :noweb strip-export
+  $0
+#+END_SRC

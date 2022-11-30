@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: usepackage
+# key: <lp
+# --
+#+LATEX_HEADER: \usepackage{$0}

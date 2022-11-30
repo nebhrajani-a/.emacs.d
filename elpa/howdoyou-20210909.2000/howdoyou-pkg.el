@@ -1,0 +1,2 @@
+;;; Generated package description from howdoyou.el  -*- no-byte-compile: t -*-
+(define-package "howdoyou" "20210909.2000" "A stackoverflow and its sisters' sites reader" '((emacs "25.1") (promise "1.1") (request "0.3.3") (org "9.2")) :commit "a01971a7279c8a031de78513c004d7a09d293712" :authors '(("Thanh Vuong" . "thanhvg@gmail.com")) :maintainer '("Thanh Vuong" . "thanhvg@gmail.com") :url "https://github.com/thanhvg/howdoyou/")

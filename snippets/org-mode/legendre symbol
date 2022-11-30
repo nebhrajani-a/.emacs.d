@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: legendre symbol
+# key: lgnd
+# --
+\left(\frac{$1}{$2} \right)$3

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: <abs
+# key: <abs
+# --
+#+begin_abstract
+$1
+#+end_abstract
+$0

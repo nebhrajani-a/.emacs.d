@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: attrbooktabs
+# key: <alb
+# --
+#+ATTR_LATEX: :booktabs t

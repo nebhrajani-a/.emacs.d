@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: gened
+# key: <gened
+# --
+#+date:
+#+options: toc:nil
+
+#+LATEX_CLASS_OPTIONS: [12pt]
+
+#+LATEX_HEADER: \linespread{2}
+
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Times New Roman}

@@ -1,0 +1,65 @@
+
+               ==================================
+                   HELP FOR VHDL COMMAND KEYS
+               ==================================
+
+VHDL Major Mode Bindings:
+----------------------------
+
+key              binding
+---              -------
+
+RET		 vhdl-newline
+,		 vhdl-stutter-comma
+.		 vhdl-stutter-period
+]		 vhdl-stutter-close-bracket
+[		 vhdl-stutter-open-bracket
+'		 vhdl-stutter-quote
+;		 vhdl-stutter-semicolon
+-		 vhdl-stutter-dash
+SPC		 vhdl-outer-space
+TAB		 vhdl-tab-or-dabbrev
+C-c		 Prefix Command
+DEL		 backward-delete-char-untabify
+
+C-c a            vhdl-architecture                    
+C-c C-a          vhdl-array                           
+C-c A            vhdl-assert                          
+C-c <            vhdl-backward-to-same-indent         
+C-c d            vhdl-block                           
+C-c c            vhdl-case                            
+C-c C            vhdl-component                       
+C-c C-c          vhdl-display-comment                 
+C-c E            vhdl-else                            
+C-c I            vhdl-elsif                           
+C-c e            vhdl-entity                          
+C-c x            vhdl-exit                            
+C-c f            vhdl-for-loop                        
+C-c >            vhdl-forward-to-same-indent          
+C-c C-f          vhdl-function-spec                   
+C-c h            vhdl-help                            
+C-c i            vhdl-if                              
+C-c -            vhdl-inline-comment                  
+C-c l            vhdl-loop                            
+C-c k            vhdl-package-body                    
+C-c C-k          vhdl-package-spec                    
+C-c (            vhdl-paired-parens                   
+C-c C-p          vhdl-procedure-spec                  
+C-c C-r          vhdl-record                          
+ ]               vhdl-stutter-close-bracket           
+ ,               vhdl-stutter-comma                   
+ -               vhdl-stutter-dash                    
+ [               vhdl-stutter-open-bracket            
+ .               vhdl-stutter-period                  
+  '              vhdl-stutter-quote                   
+ ;               vhdl-stutter-semicolon               
+C-c C-s          vhdl-subtype                         
+C-c t            vhdl-tabsize                         
+C-c C-t          vhdl-type                            
+C-c TAB          vhdl-untab                           
+C-c C-u          vhdl-use                             
+C-c v            vhdl-variables                       
+C-c C-w          vhdl-when                            
+C-c w            vhdl-while-loop                      
+C-c @            add-vhdl-function                    
+C-c #            write-vhdl-function                  

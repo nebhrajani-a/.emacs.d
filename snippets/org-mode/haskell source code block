@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: haskell source code block
+# key: <hsrc
+# --
+#+BEGIN_SRC haskell :eval no-export :exports both :noweb strip-export :compile yes
+$0
+#+END_SRC
